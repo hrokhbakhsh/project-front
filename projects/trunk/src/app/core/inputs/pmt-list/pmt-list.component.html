@@ -1,0 +1,17 @@
+
+<mat-form-field  class="form__full-width col-12">
+  <mat-label class="text-capitalize">
+    {{ label}}
+  </mat-label>
+  <mat-select
+    (selectionChange)="onChange($event.value)"
+    (blur)="_onTouched()">
+    
+    <mat-option *ngFor="let option of options"  class="text-capitalize" [value]="option.value">
+      {{option.label}}
+    </mat-option>
+  </mat-select>
+  <mat-hint *ngIf="control?.errors && (control?.touched || control?.dirty)">
+    <mat-error *ngIf="control?.errors?.required">*{{label}} {{ 'validator.is-required' | translate}}</mat-error>
+  </mat-hint>
+</mat-form-field>

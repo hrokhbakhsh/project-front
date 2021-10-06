@@ -1,0 +1,20 @@
+
+<mat-form-field class="full-width col-12">
+  <mat-label class="text-capitalize">{{label}}</mat-label>
+  <textarea
+    type="text"
+    (change)="onChange($event)"
+    (blur)="_onTouched()"
+    matInput
+    class="text-capitalize">
+  </textarea>
+  <mat-hint *ngIf="control?.errors && (control?.touched || control?.dirty)">
+    <mat-error *ngIf="control?.errors?.required">*{{label}} {{ 'validator.is-required' | translate}}</mat-error>
+    <mat-error *ngIf="control?.errors?.email">*{{ 'validator.is-not-email' | translate}}</mat-error>
+    <mat-error *ngIf="control?.errors?.minlength">*{{label}}{{ 'validator.more' | translate}} {{control?.errors?.minlength?.actualLength}}/{{control?.errors?.minlength?.requiredLength}}</mat-error>
+    <mat-error *ngIf="control?.errors?.maxlength">*{{label}} {{ 'validator.less' | translate}} {{control?.errors?.maxlength?.actualLength}}/{{control?.errors?.maxlength?.requiredLength}}</mat-error>
+    <mat-error *ngIf="control?.errors?.max">*{{label}} {{label}} {{ 'validator.more' | translate}} {{control?.errors?.max?.actual}}/{{control?.errors?.max?.max}}</mat-error>
+    <mat-error *ngIf="control?.errors?.min">*{{label}}  {{ 'validator.less' | translate}}{{control?.errors?.min?.actual}}/{{control?.errors?.min?.min}}</mat-error>
+    <mat-error *ngIf="control?.errors?.pattern">*{{ 'validator.match' | translate}}</mat-error>
+  </mat-hint>
+</mat-form-field>

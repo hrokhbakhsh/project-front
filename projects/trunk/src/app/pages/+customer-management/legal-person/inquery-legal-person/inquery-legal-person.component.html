@@ -1,0 +1,41 @@
+<pmt-card title="{{'pages.customer-management.legal-person.inquiry-legal-person.Inquiry-legal-person' | translate}}">
+  <form [formGroup]="form" class="row" (ngSubmit)="submit()">
+    <div class="col-xl-6 col-md-6">
+      <pmt-input
+        [label]="'pages.customer-management.legal-person.inquiry-legal-person.id-card' | translate"
+        formControlName="idCard">
+      </pmt-input>
+    </div>
+    <div class="col-xl-6 col-md-6">
+      <pmt-list
+        [label]="'pages.customer-management.legal-person.inquiry-legal-person.nation' | translate"
+        formControlName="nation">
+      </pmt-list>
+    </div>
+    <div class="col-xl-6 col-md-6">
+      <pmt-input
+        [label]="'pages.customer-management.legal-person.inquiry-legal-person.national-father-id' | translate"
+        formControlName="nationalFatherId">
+      </pmt-input>
+    </div>
+    <div class="col-xl-6 col-md-6">
+      <pmt-input
+        [label]="'pages.customer-management.legal-person.inquiry-legal-person.subsidiary-code' | translate"
+        formControlName="subsidiaryCode">
+      </pmt-input>
+    </div>
+    <div class="col-xl-6 col-md-6">
+      <pmt-input
+        [label]="'pages.customer-management.legal-person.inquiry-legal-person.foreign-national-code' | translate"
+        formControlName="foreignNationalCode">
+      </pmt-input>
+    </div>
+    <div class="col-xl-12 col-md-12">
+      <button mat-raised-button>
+        {{  'pages.customer-management.legal-person.inquiry-legal-person.Inquiry-legal-person' | translate}}
+      </button>
+
+    </div>
+
+  </form>
+</pmt-card>

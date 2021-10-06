@@ -1,0 +1,14 @@
+<mat-form-field class="form__full-width col-12"  >
+  <mat-label class="text-capitalize">{{ label}}</mat-label>
+  <input
+    type="text"
+    (dateInput)="onChange($event.value)"
+    (blur)="_onTouched()"
+    matInput [matDatepicker] = "picker2"
+    class="text-capitalize">
+  <mat-datepicker-toggle matSuffix [for] = "picker2"></mat-datepicker-toggle>
+  <mat-datepicker #picker2></mat-datepicker>
+  <mat-hint *ngIf="control?.errors && (control?.touched || control?.dirty)">
+    <mat-error *ngIf="control?.errors?.required">*{{label}} {{ 'validator.is-required' | translate}}</mat-error>
+  </mat-hint>
+</mat-form-field>

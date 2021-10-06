@@ -1,0 +1,240 @@
+{
+  "dir": "rtl",
+  "fa": "فارسی",
+  "project-name": "پایشگران",
+  "global": {
+    "login": "ورود",
+    "signup": "ثبت نام",
+    "logout": "خروج",
+    "profile": "حساب کاربری",
+    "settings": "تنظیمات",
+    "delete": "حذف",
+    "update": "به روز رسانی",
+    "edit": "ویرایش",
+    "add": "افزودن",
+    "show": "نمایش",
+    "messages": "پیام ها",
+    "more": "بیشتر",
+    "record": "ثبت",
+    "back": "بازگشت",
+    "yes": "بله",
+    "no": "خیر"
+  },
+  "dashboard": {
+    "home": "خانه"
+  },
+  "form": {
+    "user-name": "نام کاربری",
+    "phone-number": "تلفن ",
+    "mobile-number": "تلفن همراه",
+    "email": "ایمیل",
+    "address": "آدرس",
+    "password": "کلمه عبور",
+    "confirm-password": "تکرار کلمه عبور",
+    "submit": "ارسال",
+    "postal-code": "کدپستی",
+    "fax": "فکس",
+    "work-phone": "تلفن محل کار",
+    "work-address": "آدرس محل کار",
+    "mail-box": "صندوق پستی"
+  },
+  "layout": {
+    "message-list": {
+      "subheader": "جدید ترین پیام ها"
+    }
+  },
+  "pages": {
+    "login": {
+      "title": "صفحه ورود",
+      "dont-have-an-account": "آیا حساب کاربری ندارید؟",
+      "remember-me": "مرا به خاطر بسپار",
+      "forgot-password": "کلمه عبور خود را فراموش کرده ام"
+    },
+    "register": {
+      "do-you-have-an-account": "آیا حساب کاربری دارید؟"
+    },
+    "forgot-password": {
+      "title": "بازیابی کلمه عبور"
+    },
+    "customer-management": {
+      "legal-person": {
+        "definition-legal-person": {
+          "definition-legal-person-title": "تعریف شخص حقوقی",
+          "code": "کد",
+          "personal-code": "کد شخص",
+          "national-father-code": "شناسه ملی پدر",
+          "sub-code": "کد فرعی",
+          "Legal-entity-information": "اطلاعات شخص حقوقی",
+          "title": "عنوان",
+          "name": "نام",
+          "nick-name": "نام اختصاری",
+          "established-date": "تاریخ تاسیس",
+          "status-basic-knowledge": "وضعیت دانش بنیانی",
+          "registration-information": "اطلاعات تماس",
+          "registration-number": "شماره  ثبت ",
+          "code-insurance": "کد بیمه ",
+          "legal-status": "وضعیت حقوقی",
+          "economic-code": "کد اختصاصی",
+          "type-legal-entity": "نوع شخص حقوقی",
+          "current-status-person": "وضعیت فعلی شخص",
+          "registration-contact": "اطلاعات تماس",
+          "address": "نشانی",
+          "postal-code": "کد پستی",
+          "email": "ادرس الکترونیکی",
+          "mail-box": "صندوق پستی",
+          "mobile-number": "شماره موبایل",
+          "fax": "فکس",
+          "phone": "تلفن",
+          "addition": "افزودن",
+          "edition": "ویرایش",
+          "governmental": "دولتی",
+          "personal": "شخصی",
+          "company": "شرکت با مسئولیت محدود"
+        },
+        "inquiry-legal-person": {
+          "id-card": "شناسه ملی",
+          "nation": "ملیت ",
+          "national-father-id": "شناسه ملی پدر",
+          "subsidiary-code": "کد فرعی ",
+          "foreign-national-code": "کد اتباع خارجی ",
+          "Inquiry-legal-person": "استعلام شخص حقوقی"
+
+        }
+      },
+      "real-person": {
+        "inquiry-real-person-Title": "استعلام شخص حقیقی",
+        "define-real-person-Title": "تعریف شخص حقیقی",
+        "personal-code": "کد شخص",
+        "personal-information": "اطلاعات شخصی",
+        "certificate-id": "شماره شناسنامه",
+        "title": "عنوان",
+        "name": "نام",
+        "family": "نام خانوادگی",
+        "father": "اسم پدر",
+        "id-card": "شماره کارت ملی",
+        "passport-id": "شماره پاسپورت",
+        "current-status": "وضعیت فعلی شخص",
+        "place-issue": "محل صدور",
+        "year-issue": "سال صدور",
+        "birth-date": " تولد  ",
+        "sex": "جنسیت",
+        "latin-information": "اطلاعات لاتین",
+        "english-name": "نام لاتین ",
+        "english-family": " نام خانوادگی لاتین",
+        "contacts": "اطلاعات تماس",
+        "address": "ادرس",
+        "postal-code": "آدرس کد پستی",
+        "email": " پست الکترونیکی",
+        "mail-box": " صندوق پستی",
+        "mobile-number": " شماره تلفن همراه",
+        "fax": " فکس",
+        "phone": "تلفن",
+        "female": "خانم",
+        "male": "اقا",
+        "nation": "ملیت",
+        "foreign-national-code": "کد اتباع خارجی",
+        "city": "شهر",
+        "work-address": "آدرس محل کار"
+      }
+    },
+    "grouping-person": {
+      "grouping-person": {
+      "grouping-personTitle": "گروه بندی اشخاص",
+      "type-person": "نوع شخص",
+      "name-person": "نام شخص",
+      "national-code": "کد ملی",
+      "search": "جست و جو",
+      "type-person-list": {
+        "real-person": "شخص حقیقی ",
+        "legal-person": "شخص حقوقی"
+      }}
+    },
+    "unit-teammate": {
+      "define-teammate-unit": {
+        "add-teammate": {
+          "add-teammate-unit-title": "افزودن واحد همکار",
+          "code": "کد",
+          "sub-code": "کد فرعی",
+          "teammate-unit-type": "نوع واحد همکار",
+          "upstream": "بالا دست",
+          "geographic-location": "محل جغرافیایی",
+          "effective-history": "تاريخ اعتبار پرداخت کارمزد",
+          "central-insurance-unique-code": "کد يکتاي بيمه مرکزي",
+          "degree": "درجه",
+          "payment-credit-date": "تاریخ موثر",
+          "title": "عنوان",
+          "issuance-of-license": "مجوز صدور",
+          "damage-license": "مجوز خسارت",
+          "is-the-teammate-unit-active": "آيا واحد همکار فعال است؟",
+          "permissions": "مجوز ها",
+          "personal-information": "اطلاعات شخصی"
+        },
+        "list-teammate": {
+          "list-teammate-unit-title": "لیست واحد همکار",
+          "is-the-information-of-the-teammate-units-displayed": "آيا اطلاعات واحدهاي همکار زير دست نمايش داده شود؟",
+          "show-previous-records-of-teammate-unit": "آيا سوابق قبلي واحد همکار نمايش داده شود؟",
+          "teammate-unit": "واحد همکار",
+          "teammate-unit-title": "عنوان واحد همکار",
+          "teammate-unit-degree": "درجه واحد همکار",
+          "upstream-unit": "واحد بالادست",
+          "status-teammate-unit": "وضعيت واحد همکار",
+          "row": "ردیف",
+          "search": "جست و جو",
+          "teammate-unit-type": "نوع واحد همکار",
+          "teammate-unit-type-list": {
+            "headquarters": "ستاد",
+            "state": "استان",
+            "branch": "شعبه",
+            "real-representation": "نمایندگی حقیقی",
+            "representation-company": "شرکت نمایندگی",
+            "real-broker": "کارگزار حقیقی",
+            "legal-broker": "کارگزار حقوقی ",
+            "representative-life": "نمایندگی بیمه عمر"
+          }
+
+        }
+      },
+      "damage-license-list": {
+        "Licensing": "ایا مجوز صدور مسئولیت دارید؟",
+        "engineering-license": "ایا مجوز صدور مهندسی دارید ؟",
+        "energy-export-license": "ایا مجوز صدور انرژی دارید"
+      },
+      "issuance-license-option": {
+        "compensation-license-liable": "ایا مجوز پرداخت خسارت مسئولیت دارد",
+        "licensed-pay-engineering-damage": "ایا مجوز پرداخت خسارت مهندسی دارد؟",
+        "licensed-pay-energy-damages": "ایا مجوز پرداخت خسارت انرژی دارد؟"
+      }
+    }
+  },
+  "inbox-message": {
+    "title-page": "صندوق پیام",
+    "id": "شناسه",
+    "title": "عنوان",
+    "date": "تاریخ",
+    "detail-message": "متن پیام",
+    "operation": "عملیات",
+    "label-filter-input": "متن جستجو",
+    "to-date": "از تاریخ ",
+    "until-date": "تا تاریخ",
+    "search": "اعمال فیلتر"
+  },
+  "validator": {
+    "is-required": "الزامی است",
+    "is-not-email": "ایمیل معتبر نیست",
+    "more": "باید بیشتر باشد",
+    "less": "باید کمتر باشد",
+    "match": "تطابق ندارد"
+  },
+  "button": {
+    "submit": "تایید",
+    "add": "اضافه کردن",
+    "save": "اضافه کردن",
+    "new": "جدید",
+    "edit": "ویرایش",
+    "info": "اطلاعات",
+    "view": "نمایش",
+    "list": "لیست",
+    "search": "جستجو",
+    "delete": "حذف"
+  }
+}

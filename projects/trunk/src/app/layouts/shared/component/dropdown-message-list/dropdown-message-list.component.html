@@ -1,0 +1,20 @@
+<button mat-icon-button [matMenuTriggerFor]="messageList"  aria-label="Example icon-button with share icon">
+  <mat-icon  matBadge="3" matBadgeOverlap="true">email</mat-icon>
+</button>
+<mat-menu #messageList="matMenu" class="dropdown-massage-list">
+  <mat-list>
+    <div mat-subheader><span > {{'layout.message-list.subheader'| translate}}</span></div>
+    <mat-list-item *ngFor="let message of messages">
+<!--      <mat-icon mat-list-icon>folder</mat-icon>-->
+      <div mat-line>{{message.title}}</div>
+      <div mat-line>{{message.messageBody}}</div>
+      <div mat-line class="mt-2 mat-list-item--date"> {{message.updated}} </div>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+  </mat-list>
+
+
+  <button routerLink="inbox" mat-menu-item class="text-center">
+    <span translate="global.more"></span>
+  </button>
+</mat-menu>

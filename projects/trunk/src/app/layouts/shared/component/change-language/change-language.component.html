@@ -1,0 +1,11 @@
+<button mat-button class="p-0" [matMenuTriggerFor]="menu">
+  <mat-icon>g_translate</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item
+          *ngFor="let lang of languages"
+          [ngClass]="{'btn-current-lang': lang === currentLang}"
+          (click)="changeLanguage(lang)">
+    {{lang | translate}}
+  </button>
+</mat-menu>

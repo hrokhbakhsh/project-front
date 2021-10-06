@@ -1,0 +1,291 @@
+<div class="content-section introduction">
+    <div class="feature-intro">
+        <h1>My Page</h1>
+        <p-toast [style]="{marginTop: '80px'}"></p-toast>
+        <div class="p-grid">
+            <div class="p-col-2">
+                <app-input-text id="username"
+                                label="global.field.username"
+                                [isRequired]="true"
+                                [(ngModel)]="value1">
+                </app-input-text>
+            </div>
+            <div class="p-col-2">
+                <app-input-text id="search"
+                                label="global.field.search"
+                                icon="search"
+                                iconDirection="left"
+                                [(ngModel)]="value2">
+                </app-input-text>
+            </div>
+            <div class="p-col-2">
+                <app-input-autocomplete id="autocomplete"
+                                        label="global.field.country"
+                                        [isRequired]="true"
+                                        [(ngModel)]="selectedCountry"
+                                        [suggestions]="filteredCountries"
+                                        (completeMethod)="search($event)"
+                                        field="name">
+                </app-input-autocomplete>
+            </div>
+            <div class="p-col-2">
+
+                <app-input-datepicker id="dpDatepicker"
+                                      [isRequired]="true"
+                                      [(ngModel)]="dateObject">
+                </app-input-datepicker>
+
+            </div>
+        </div>
+        <div class="p-grid">
+            <div class="p-col-2">
+                <div class="p-field">
+                    <div class="p-field-checkbox">
+                        <p-checkbox name="group1" value="New York" [(ngModel)]="selectedCities"
+                                    inputId="ny"></p-checkbox>
+                        <label for="ny">New York</label>
+                    </div>
+                    <div class="p-field-checkbox">
+                        <p-checkbox name="group1" value="San Francisco" [(ngModel)]="selectedCities"
+                                    inputId="sf"></p-checkbox>
+                        <label for="sf">San Francisco</label>
+                    </div>
+                </div>
+
+                <div class="p-field">
+                    <div class="p-field-radiobutton">
+                        <p-radioButton name="city" value="Chicago" [(ngModel)]="city" inputId="city1"></p-radioButton>
+                        <label for="city1">Chicago</label>
+                    </div>
+                    <div class="p-field-radiobutton">
+                        <p-radioButton name="city" value="Los Angeles" [(ngModel)]="city" inputId="city2"></p-radioButton>
+                        <label for="city2">Los Angeles</label>
+                    </div>
+                </div>
+            </div>
+            <div class="p-col-2">
+                <app-input-dropdown id="dropdown1"
+                                    label="global.field.city"
+                                    [isRequired]="true"
+                                    [options]="cities"
+                                    optionLabel="name"
+                                    [(ngModel)]="selectedCity1">
+                </app-input-dropdown>
+
+            </div>
+            <div class="p-col-2">
+                <app-input-number id="integerOnly"
+                                  label="global.field.amount"
+                                  [isRequired]="true"
+                                  [(ngModel)]="numberValue">
+                </app-input-number>
+            </div>
+            <div class="p-col-2">
+                <app-input-number id="decimal"
+                                  label="global.field.sharePercent"
+                                  [isRequired]="true"
+                                  [minFractionDigits]="2"
+                                  [maxFractionDigits]="5"
+                                  [(ngModel)]="numberValue2">
+                </app-input-number>
+            </div>
+            <div class="p-col-2">
+                <app-input-textarea id="textarea"
+                                    label="global.field.description"
+                                    [isRequired]="true"
+                                    [(ngModel)]="desc">
+                </app-input-textarea>
+            </div>
+        </div>
+        <div class="p-grid">
+            <div class="p-col-4">
+                <button style="margin: 7px" pButton pRipple type="button" label="Primary" (click)="buttonClicked()"></button>
+                <button style="margin: 7px" pButton pRipple type="button" label="Success" class="p-button-success"></button>
+                <button style="margin: 7px" pButton pRipple type="button" label="Info" class="p-button-info"></button>
+                <button style="margin: 7px" pButton pRipple type="button" label="Warning" class="p-button-warning"></button>
+                <button style="margin: 7px" pButton pRipple type="button" label="Help" class="p-button-help"></button>
+                <button style="margin: 7px" pButton pRipple type="button" label="Danger" class="p-button-danger"></button>
+            </div>
+            <div class="p-col-4">
+                <p-button [style]="{'margin': '7px'}" styleClass="p-button-rounded p-button-success" icon="pi pi-plus"></p-button>
+                <p-button [style]="{'margin': '7px'}" label="Submit" icon="pi pi-check"></p-button>
+                <p-button [style]="{'margin': '7px'}" label="Submit" icon="pi pi-check" iconPos="right"></p-button>
+            </div>
+            <div class="p-col-4">
+                <p-button [style]="{'margin': '7px'}" styleClass="p-button-rounded p-button-primary" label="Primary"></p-button>
+                <p-button [style]="{'margin': '7px'}" styleClass="p-button-rounded p-button-success" label="Success"></p-button>
+                <p-button [style]="{'margin': '7px'}" styleClass="p-button-rounded p-button-info" label="Info"></p-button>
+                <p-button [style]="{'margin': '7px'}" styleClass="p-button-rounded p-button-warning" label="Warning"></p-button>
+                <p-button [style]="{'margin': '7px'}" styleClass="p-button-rounded p-button-help" label="Help"></p-button>
+                <p-button [style]="{'margin': '7px'}" styleClass="p-button-rounded p-button-danger" label="Danger"></p-button>
+            </div>
+        </div>
+        <div class="p-grid">
+            <div class="card">
+                <h5>Row Editing</h5>
+                <p-button [style]="{'margin': '7px'}" label="Add new row"
+                          (onClick)="addRowToTable()"
+                          icon="pi pi-plus"></p-button>
+
+                <p-table [value]="products2" dataKey="id" editMode="row"
+                         [paginator]="true"
+                         [rows]="10"
+                         styleClass="p-datatable-striped">
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th>id</th>
+                            <th>Code<p-columnFilter type="text" field="code"></p-columnFilter></th>
+                            <th>Name<p-columnFilter type="text" field="name"></p-columnFilter></th>
+                            <th>Category<p-columnFilter type="text" field="category.name"></p-columnFilter></th>
+                            <th>Price</th>
+                            <th style="width:8rem"></th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-product let-editing="editing" let-ri="rowIndex">
+                        <tr [pEditableRow]="product">
+                            <td>
+                                <p-cellEditor>
+                                    <ng-template pTemplate="input">
+                                        <input pInputText type="text" [(ngModel)]="product.id">
+                                    </ng-template>
+                                    <ng-template pTemplate="output">
+                                        {{product.id}}
+                                    </ng-template>
+                                </p-cellEditor>
+                            </td>
+                            <td>
+                                <p-cellEditor>
+                                    <ng-template pTemplate="input">
+                                        <input pInputText type="text" [(ngModel)]="product.code">
+                                    </ng-template>
+                                    <ng-template pTemplate="output">
+                                        {{product.code}}
+                                    </ng-template>
+                                </p-cellEditor>
+                            </td>
+                            <td>
+                                <p-cellEditor>
+                                    <ng-template pTemplate="input">
+                                        <input pInputText type="text" [(ngModel)]="product.name" required>
+                                    </ng-template>
+                                    <ng-template pTemplate="output">
+                                        {{product.name}}
+                                    </ng-template>
+                                </p-cellEditor>
+                            </td>
+                            <td>
+                                <p-cellEditor>
+                                    <ng-template pTemplate="input">
+                                        <p-dropdown [options]="categories" [(ngModel)]="product.category"
+                                                    optionLabel="name"
+                                                    [style]="{'width':'100%'}"></p-dropdown>
+                                    </ng-template>
+                                    <ng-template pTemplate="output">
+                                        {{product.category.name}}
+                                    </ng-template>
+                                </p-cellEditor>
+                            </td>
+                            <td>
+                                <p-cellEditor>
+                                    <ng-template pTemplate="input">
+                                        <input pInputText type="text" [(ngModel)]="product.price">
+                                    </ng-template>
+                                    <ng-template pTemplate="output">
+                                        {{product.price | currency: 'USD'}}
+                                    </ng-template>
+                                </p-cellEditor>
+                            </td>
+                            <td style="text-align:center">
+                                <button *ngIf="!editing" pButton pRipple type="button" pInitEditableRow icon="pi pi-pencil" (click)="onRowEditInit(product)" class="p-button-rounded p-button-text edit-button"></button>
+                                <button *ngIf="editing" pButton pRipple type="button" pSaveEditableRow icon="pi pi-check" (click)="onRowEditSave(product)" class="p-button-rounded p-button-text p-button-success p-mr-2"></button>
+                                <button *ngIf="editing" pButton pRipple type="button" pCancelEditableRow icon="pi pi-times" (click)="onRowEditCancel(product, ri)" class="p-button-rounded p-button-text p-button-danger"></button>
+                            </td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+            </div>
+        </div>
+        <div class="p-grid">
+            <p-table [columns]="selectedColumns" [value]="products2" [paginator]="true" [rows]="5" >
+                <ng-template pTemplate="caption">
+                    <p-multiSelect [options]="cols" [(ngModel)]="selectedColumns" optionLabel="header"
+                                   selectedItemsLabel="{0} columns selected" [style]="{minWidth: '200px'}" placeholder="Choose Columns"></p-multiSelect>
+                </ng-template>
+                <ng-template pTemplate="header" let-columns>
+                    <tr>
+                        <th>Code</th>
+                        <th *ngFor="let col of columns">
+                            {{col.header}}
+                        </th>
+                        <th>Operations</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-product let-columns="columns">
+                    <tr>
+                        <td>{{product.code}}</td>
+                        <td *ngFor="let col of columns">
+                            {{col.field === 'category'
+                            ? product[col.field].name
+                            : col.field === 'price'
+                                ? (product[col.field] | currency: 'EUR')
+                                : product[col.field]}}
+                        </td>
+                        <td>
+                            <p-button (click)="showDetails(product)"
+                                      [style]="{'margin': '7px'}"
+                                      styleClass="p-button-rounded p-button-success"
+                                      icon="pi pi-list"></p-button>
+                        </td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+        <div class="p-grid">
+            <div class="card">
+                <h5>Tab</h5>
+                <p-tabView>
+                    <p-tabPanel header="Header I">
+                        <h5>Dynamic dialog</h5>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                            architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                            voluptatem sequi nesciunt. Consectetur, adipisci velit, sed quia non numquam eius modi.</p>
+                        <br>
+                        <br>
+                        <button type="button" class="p-button-warning" (click)="show()" pButton icon="pi pi-info-circle" label="Dyanmic"></button>
+                        <br>
+                        <br>
+                        <button type="button" class="p-button-warning" (click)="samePageDialog=true" pButton icon="pi pi-info-circle" label="Same Page"></button>
+                        <p-dialog header="Header" [(visible)]="samePageDialog" [style]="{width: '50vw'}" [baseZIndex]="10000"
+                        [modal]="true">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <ng-template pTemplate="footer">
+                                <p-button icon="pi pi-check" (click)="samePageDialog=false" label="Ok" styleClass="p-button-info"></p-button>
+                            </ng-template>
+                        </p-dialog>
+                    </p-tabPanel>
+                    <p-tabPanel header="Header II">
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                            architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                            voluptatem sequi nesciunt. Consectetur, adipisci velit, sed quia non numquam eius modi.</p>
+                    </p-tabPanel>
+                    <p-tabPanel header="Header III">
+                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+                            cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
+                            Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus.</p>
+                    </p-tabPanel>
+                </p-tabView>
+            </div>
+        </div>
+        <div class="p-grid">
+            <div class="p-col-4">
+                <p-chart type="bar" [data]="dataBar"></p-chart>
+            </div>
+            <div class="p-col-4">
+                <p-chart type="pie" [data]="dataPie"></p-chart>
+            </div>
+        </div>
+    </div>
+</div>

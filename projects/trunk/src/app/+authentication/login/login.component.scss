@@ -1,0 +1,70 @@
+body{
+  overflow-x: hidden !important;
+}
+.login {
+  max-height: 100vh;
+
+  .login--box-image {
+    width: 50%;
+    height: 100vh;
+    background-image: url("/assets/images/login/login-bgc.jpg");
+    background-size: cover;
+
+    .login--box-image__gradient {
+      height: 100vh;
+      background-image: linear-gradient(135deg, rgba(0, 255, 255, 0.35), rgba(0, 65, 101, 0.66));
+      
+    }
+  }
+
+  .login--box-form {
+    width: 50%;
+    height: 100vh;
+    padding-top: 10%;
+    background: #f5f5f5;
+
+/*
+    ::ng-deep {
+
+      .mat-form-field-empty.mat-form-field-label {
+        color: green !important;
+      }
+
+      .mat-form-field-appearance-outline .mat-form-field-outline {
+        color: green !important;
+      }
+
+      .mat-focused .mat-form-field-label .mat-form-field-placeholder {
+        !*change color of label*!
+        color: green !important;
+      }
+
+      .mat-form-field-underline .mat-form-field-placeholder {
+        !*change color of underline*!
+        background-color: green !important;
+      }
+
+      .mat-form-field-ripple {
+        !*change color of underline when focused*!
+        background-color: green !important;;
+      }
+    }*/
+
+  }
+}
+
+  //Responsive
+  @media only screen and (max-width: 992px) {
+ 
+    .login--box-image {
+display: none;
+    }
+      .login--box-image__gradient {
+        display: none;
+      }
+      .login .login--box-form {
+        width: 100%;
+      }
+ 
+
+  }

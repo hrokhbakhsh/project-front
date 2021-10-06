@@ -1,0 +1,47 @@
+<form [formGroup]="myForm" (ngSubmit)="ngSubmit()" class="row">
+  <ng-container  *ngFor="let control of jsonFormData?.controls">
+    <div [ngClass]="control?.class">
+      <pmt-input
+        *ngIf="[
+        'text',
+        'password',
+        'number',
+        'search',
+        'tel',
+        'url'
+        ].includes(control.type) && !control.multi"
+        [label]="control.label"
+        [formControlName]="control.name"></pmt-input>
+      <pmt-textarea
+        [label]="control.label"
+        *ngIf="control.type === 'textarea'"
+        [formControlName]="control.name"
+      ></pmt-textarea>
+      <pmt-checkbox
+        *ngIf="control.type === 'checkbox'"
+        [formControlName]="control.name"
+        [label]="control.label"></pmt-checkbox>
+      <pmt-date
+        *ngIf="control.type === 'date'"
+        [formControlName]="control.name"
+        [label]="control.label"></pmt-date>
+      <pmt-list
+        [options]="control.data"
+        *ngIf="control.type === 'list'"
+        [formControlName]="control.name"
+        [label]="control.label"></pmt-list>
+
+
+      <pmt-input-multi
+        *ngIf="control.type === 'text'  && control.multi"
+
+        [parent]="myForm"
+        [label]="control.label"
+        [formArrayName]="control.name"
+      >
+
+      </pmt-input-multi>
+    </div>
+  </ng-container>
+  <button mat-raised-button type="submit">ok</button>
+</form>

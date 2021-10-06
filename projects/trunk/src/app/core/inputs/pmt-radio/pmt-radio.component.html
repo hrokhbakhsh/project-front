@@ -1,0 +1,19 @@
+
+<div class="full-width">
+  <mat-radio-group
+    (change)="onChange($event.value)"
+    (blur)="_onTouched()"
+    aria-label="Select an option">
+    <mat-radio-button
+      *ngFor="let option of options"
+      class="text-capitalize mx-2"
+      [value]="option.value">
+      {{option.label}}
+    </mat-radio-button>
+  </mat-radio-group>
+  <mat-hint *ngIf="control?.errors && (control?.touched || control?.dirty)">
+    <mat-error *ngIf="control?.errors?.required">*{{label}} {{ 'validator.is-required' | translate}}</mat-error>
+  </mat-hint>
+</div>
+
+

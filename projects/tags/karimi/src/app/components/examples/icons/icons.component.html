@@ -1,0 +1,17 @@
+<div class="content-section">
+    <div class="feature-intro">
+        <h1>Icons</h1>
+        <div class="p-grid p-fluid">
+            <div class="p-col-12">
+               <input class="icon-filter" (input)="onFilter($event)" pInputText placeholder="Search an icon">
+
+                <div class="p-grid icons-list">
+                    <div class="p-col-12 p-md-2" *ngFor="let icon of filteredIcons">
+                        <i class="pi pi-{{icon.properties.name}}"></i>
+                        <div>pi-{{icon.properties.name}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,193 @@
+<pmt-card title="{{'pages.unit-teammate.define-teammate-unit.add-teammate.add-teammate-unit-title' | translate}}">
+
+  <form [formGroup]="unitTeammateForm" (ngSubmit)="submitted()">
+    <div formGroupName="codeForm">
+      <div class="row">
+        <div class="col-xl-6 col-md-12">
+          <pmt-input
+            [label]="'pages.unit-teammate.define-teammate-unit.add-teammate.code' | translate"
+            formControlName="code">
+          </pmt-input>
+        </div>
+        <div class="col-xl-6 col-md-12">
+          <pmt-input
+            [label]="'pages.unit-teammate.define-teammate-unit.add-teammate.sub-code' | translate"
+            formControlName="subCode">
+          </pmt-input>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-xl-6 col-md-12">
+          <pmt-input
+            [label]="'pages.unit-teammate.define-teammate-unit.add-teammate.title' | translate"
+            formControlName="title">
+          </pmt-input>
+        </div>
+        <div class="col-xl-6 col-md-12">
+          <pmt-input
+            [label]="'pages.unit-teammate.define-teammate-unit.add-teammate.central-insurance-unique-code' | translate"
+            formControlName="centralInsuranceUniqueCode">
+          </pmt-input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-6 col-md-12">
+          <pmt-list
+            [options]="UnitTypeOption"
+            [label]="'pages.unit-teammate.define-teammate-unit.add-teammate.teammate-unit-type' | translate"
+            formControlName="teammateUnitType">
+          </pmt-list>
+        </div>
+        <div class="col-xl-6 col-md-12">
+          <pmt-list
+            [options]="UnitTypeOption"
+
+            [label]="'pages.unit-teammate.define-teammate-unit.add-teammate.degree' | translate"
+            formControlName="degree">
+          </pmt-list>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-xl-6 col-md-12">
+          <pmt-list
+            [label]="'pages.unit-teammate.define-teammate-unit.add-teammate.upstream' | translate"
+            formControlName="upstream">
+          </pmt-list>
+        </div>
+        <div class="col-xl-6 col-md-12">
+          <pmt-list
+            [label]="'pages.unit-teammate.define-teammate-unit.add-teammate.geographic-location' | translate"
+            formControlName="geographicLocation">
+          </pmt-list>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-6 col-md-12">
+          <pmt-date
+            [label]="'pages.unit-teammate.define-teammate-unit.add-teammate.effective-history' | translate"
+            formControlName="effectiveHistory">
+          </pmt-date>
+        </div>
+        <div class="col-xl-6 col-md-12">
+          <pmt-date
+            [label]="'pages.unit-teammate.define-teammate-unit.add-teammate.payment-credit-date' | translate"
+            formControlName="paymentCreditDate">
+          </pmt-date>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-3 col-md-3">
+
+          <pmt-checkbox formControlName="teammateActive"
+                        [label]="'pages.unit-teammate.define-teammate-unit.add-teammate.is-the-teammate-unit-active' | translate">
+          </pmt-checkbox>
+
+        </div>
+        <div class="col-xl-9 col-md-9">
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-xl-2 col-md-2"><h4
+        class="text-center"> {{'pages.unit-teammate.define-teammate-unit.add-teammate.permissions' | translate}} </h4>
+      </div>
+      <div class="col-xl-10 col-md-10">
+        <hr>
+      </div>
+    </div>
+    <div formGroupName="LicenseTeammateForm">
+
+      <div class="row">
+        <div class="col-xl-6 col-md-12">
+          <pmt-list
+            [options]="issuanceLicenseOption"
+            [label]="'pages.unit-teammate.define-teammate-unit.add-teammate.issuance-of-license' | translate"
+            formControlName="IssuanceOfLicense">
+          </pmt-list>
+        </div>
+        <div class="col-xl-6 col-md-12">
+          <pmt-list
+            [options]="damageLicenseOption"
+
+            [label]="'pages.unit-teammate.define-teammate-unit.add-teammate.damage-license' | translate"
+            formControlName="DamageLicense">
+          </pmt-list>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="row">
+      <div class="col-xl-2 col-md-2"><h4
+        class="text-center"> {{'pages.unit-teammate.define-teammate-unit.add-teammate.personal-information' | translate}} </h4>
+      </div>
+      <div class="col-xl-10 col-md-10">
+        <hr>
+      </div>
+    </div>
+    <div formGroupName="personalInfoTeammateForm">
+      <div class="row">
+        <div class="col-xl-6 col-md-12">
+          <pmt-input
+            [label]="'form.phone-number' | translate"
+            formControlName="phoneNumber">
+          </pmt-input>
+        </div>
+        <div class="col-xl-6 col-md-12">
+          <pmt-input
+            [label]="'form.mobile-number' | translate"
+            formControlName="mobileNumber">
+          </pmt-input>
+        </div>
+        <div class="col-xl-6 col-md-12">
+          <pmt-input
+            [label]="'form.postal-code' | translate"
+            formControlName="postalCode">
+          </pmt-input>
+        </div>
+        <div class="col-xl-6 col-md-12">
+          <pmt-input
+            [label]="'form.fax' | translate"
+            formControlName="fax">
+          </pmt-input>
+        </div>
+        <div class="col-xl-6 col-md-12">
+          <pmt-input
+            [label]="'form.email' | translate"
+            formControlName="email">
+          </pmt-input>
+        </div>
+        <div class="col-xl-6 col-md-12">
+          <pmt-input
+            [label]="'form.mail-box' | translate"
+            formControlName="mailBox">
+          </pmt-input>
+        </div>
+        <div class="col-xl-6 col-md-12">
+          <pmt-input
+            [label]="'form.work-phone' | translate"
+            formControlName="workPhone">
+          </pmt-input>
+        </div>
+        <div class="col-xl-6 col-md-12">
+          <pmt-input
+            [label]="'form.work-address' | translate"
+            formControlName="workAddress">
+          </pmt-input>
+        </div>
+        <div class="col-xl-6 col-md-12">
+          <pmt-input
+            [label]="'form.address' | translate"
+            formControlName="address">
+          </pmt-input>
+        </div>
+      </div>
+    </div>
+
+  </form>
+</pmt-card>

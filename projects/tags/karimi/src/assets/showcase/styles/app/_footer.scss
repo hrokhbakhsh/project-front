@@ -1,0 +1,19 @@
+.layout-footer {
+    padding: 2rem;
+    margin-top: 2rem;
+    font-size: 1rem;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+
+    a {
+        color: var(--text-color);
+        font-weight: 600;
+    }
+    p {
+        color: var(--primary-color-text);
+        margin: 0 auto;
+    }
+}

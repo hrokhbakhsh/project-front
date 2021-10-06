@@ -1,0 +1,22 @@
+<div [formGroup]="parent">
+  <div [formArrayName]="formArrayName"  >
+    <div  class="row">
+      <mat-form-field *ngFor="let item of items.controls; let i = index; " class="full-width col-12">
+        <mat-label class="text-capitalize py-5">{{label}}</mat-label>
+        <input
+          matInput
+          [formControlName]="i"
+          class="text-capitalize">
+        <button  matSuffix mat-icon-button aria-label="Clear" (click)="remove(i)">
+          <mat-icon>close</mat-icon>
+        </button>
+        <mat-hint *ngIf="hasError(i)">
+          <mat-error>required</mat-error>
+        </mat-hint>
+      </mat-form-field>
+    </div>
+    <div  class="col-1">
+      <pmt-button (click)="addItems()" type="ADD"></pmt-button>
+    </div>
+  </div>
+</div>

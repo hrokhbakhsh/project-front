@@ -1,0 +1,60 @@
+<div class="d-flex flex-row login" [dir]="'dir' | translate">
+
+  <div class="login--box-form">
+    <div class="container">
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col">
+          <header class="text-center">
+            <mat-icon class="">lock</mat-icon>
+            <h1 class="text-bold"><span translate="global.signup"></span></h1>
+            <h4><span translate="pages.register.do-you-have-an-account"></span>
+              &nbsp;
+              <a routerLink="/login"><span translate="global.login"></span></a>
+            </h4>
+          </header>
+
+
+
+          <div class="row mt-5">
+            <div class="col">
+              <form [formGroup]="registerForm" class="" [dir]="'dir' | translate">
+
+                <div class="form-group">
+                  <label for="phoneNumber"><span translate="form.phoneNumber"></span></label>
+                  <input type="email" class="form-control" id="phoneNumber" aria-describedby="emailHelp" >
+                </div>
+                <div class="form-group">
+                  <label for="email"><span translate="form.email"></span></label>
+                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" >
+                </div>
+                <div class="form-group">
+                  <label for="password"><span translate="form.password"></span></label>
+                  <input type="password" class="form-control" id="password" >
+                </div>
+                <div class="form-group">
+                  <label for="confirmPassword"><span translate="form.confirm-password"></span></label>
+                  <input type="password" class="form-control" id="confirmPassword" >
+                </div>
+
+
+
+                <div class="text-center mt-5">
+                  <button type="submit" class="btn btn-primary full-width"><span translate="global.signup"></span></button>
+                </div>
+
+
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-2"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="login--box-image">
+    <div class="login--box-image__gradient"></div>
+  </div>
+
+</div>

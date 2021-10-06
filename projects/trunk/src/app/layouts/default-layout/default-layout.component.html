@@ -1,0 +1,21 @@
+<div class="main_sidebar default" [dir]="'dir' | translate"  >
+
+  <mat-sidenav-container  (backdropClick)="ngBackdropClick($event)"  >
+    <mat-sidenav [mode]="sideBarMode()" [opened]="sidenavIsOpenedSubject" [position]="position" class="main_sidebar--main_menu">
+
+      <pmt-default-sidebar-header></pmt-default-sidebar-header>
+
+      <mat-nav-list>
+        <pmt-menu-list-item *ngFor="let item of navItems" [item]="item"></pmt-menu-list-item>
+      </mat-nav-list>
+    </mat-sidenav>
+    <div class="content">
+      <pmt-default-header></pmt-default-header>
+      <div class="container mt-4">
+        <router-outlet></router-outlet>
+      </div>
+      <pmt-default-footer></pmt-default-footer>
+    </div>
+    <!--  <span class="version-info">Current build: {{version.full ? version.full : version}}</span>-->
+  </mat-sidenav-container>
+</div>

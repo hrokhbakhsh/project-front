@@ -1,0 +1,19 @@
+
+::ng-deep {
+  .dropdown-massage-list {
+    .mat-menu-panel {
+      min-width: 382px;
+      max-width: 321px;
+    }
+
+    /*.mat-list-item:hover {
+      background-color: var(--pmt-toolbar-dark);;
+    }*/
+
+    .mat-list-item--date {
+      font-size: 12px !important;
+    }
+
+  }
+
+}

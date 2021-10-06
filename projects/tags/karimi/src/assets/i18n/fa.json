@@ -1,0 +1,200 @@
+{
+    "home": {
+        "title": "پایشگران مدیریت طرح"
+    },
+    "global": {
+        "title": "پایشگران مدیریت طرح",
+        "browsehappy": "شما از مرورگر <strong>قدیمی</strong> استفاده می‌کنید. لطفا <a href=\"http://browsehappy.com/?locale=en\">مرورگر خود را به روز کنید</a>",
+        "menu": {
+            "home": "خانه",
+            "account": {
+                "main": "حساب",
+                "settings": "تنظیمات",
+                "password": "رمزعبور",
+                "sessions": "نشست ها",
+                "login": "ورود",
+                "logout": "خروج",
+                "register": "ثبت نام"
+            },
+            "language": "زبان",
+            "farsi": "فارسی",
+            "english": "English"
+        },
+        "form": {
+            "username.label": "نام کاربری",
+            "username.placeholder": "نام کاربری شما",
+            "currentpassword.label": "رمز فعلی",
+            "currentpassword.placeholder": "رمز فعلی",
+            "newpassword.label": "رمزعبور جدید",
+            "newpassword.placeholder": "رمزعبور جدید",
+            "confirmpassword.label": "تصدیق رمزعبور جدید",
+            "confirmpassword.placeholder": "تصدیق رمزعبور جدید",
+            "email.label": "رایانامه",
+            "email.placeholder": "آدرس رایانامه شما"
+        },
+        "messages": {
+            "info": {
+                "register": {
+                    "noaccount": "آیا هنوز حساب کاربری ندارید؟",
+                    "link": "ثبت نام حساب کاربری جدید"
+                }
+            },
+            "error": {
+                "dontmatch": "رمزعبور و تصدیق رمزعبور یکی نیستند!"
+            },
+            "validate": {
+                "newpassword": {
+                    "required": "رمزعبور شما ضروری است",
+                    "minlength": "رمزعبور شما باید حداقل ۴ کرکتر باشد",
+                    "maxlength": "رمز عبور شما نمی‌تواند بیش از ۵۰ کرکتر باشد.",
+                    "strength": "قدرتمندی رمزعبور:"
+                },
+                "confirmpassword": {
+                    "required": "تصدیق رمزعبور شما ضروری است",
+                    "minlength": "تصدیق رمزعبور شما باید حداقل ۴ کرکتر باشد",
+                    "maxlength": "تصدیق رمز عبور شما نمی‌تواند بیش از ۵۰ کرکتر باشد."
+                },
+                "email": {
+                    "required": "آدرس ایمیل شما ضروری است",
+                    "invalid": "آدرس ایمیل شما نامعتبر است",
+                    "minlength": "آدرس ایمیل شما حداقل باید ۵ کرکتر باشد",
+                    "maxlength": "آدرس ایمیل شما نمی‌تواند بیش از ۵۰ کرکتر باشد."
+                }
+            }
+        },
+        "field": {
+            "id": "شناسه",
+            "name": "نام",
+            "code": "کد",
+            "price": "مبلغ",
+            "quantity": "تعداد",
+            "category": "نوع",
+            "country": "کشور",
+            "city": "شهر",
+            "username": "نام کاربری",
+            "search": "جستجو",
+            "amount": "مبلغ",
+            "sharePercent": "درصد مشارکت",
+            "description": "شرح"
+        },
+        "item-count": "نمایش {{first}} - {{second}} از {{total}} مورد.",
+        "footer": {
+            "copyright": "پایشگران مدیریت طرح تمامی حقوق محفوظ است © 1399"
+        }
+    },
+    "entity": {
+        "action": {
+            "addblob": "اضافه کردن فایل",
+            "addimage": "اضافه کردن تصویر",
+            "back": "برگشت",
+            "cancel": "انصراف",
+            "delete": "حذف",
+            "edit": "ویرایش",
+            "open": "باز",
+            "save": "ذخیره",
+            "view": "مشاهده"
+        },
+        "detail": {
+            "field": "فیلد",
+            "value": "مقدار"
+        },
+        "delete": {
+            "title": "تصدیق عملیات حذف"
+        },
+        "validation": {
+            "required": "وارد کردن این فیلد ضروری است",
+            "minlength": "این فیلد باید حداقل {{ min }} کراکتر باشد.",
+            "maxlength": "این فیلد نمی‌تواند بیشتر از {{ max }} کرکتر باشد",
+            "min": "این فیلد باید بیشتر از {{ min }} باشد.",
+            "max": "این فیلد نمی‌تواند بیش از {{ max }} باشد.",
+            "minbytes": "این فیلد باید بیش از {{ min }} بایت باشد.",
+            "maxbytes": "این فیلد نمی‌تواند بیش از {{ max }} بایت باشد.",
+            "pattern": "این فیلد باید بر طبق این الگو {{ pattern }} باشد.",
+            "number": "این فیلد باید عدد باشد.",
+            "datetimelocal": "این فیلد باید زمان باشد."
+        },
+        "field": {
+            "datetime": "تاریخ"
+        }
+    },
+    "error": {
+        "title": "صفحه خطا!",
+        "http": {
+            "400": "خطای کاربری، لطفا ورودیها را بررسی نمایید",
+            "403": "شما به صفحه مورد نظر دسترسی ندارید.",
+            "404": "صفحه وجود ندارد",
+            "405": "The HTTP verb you used is not supported for this URL.",
+            "500": "امکان انجام عملیات وجود ندارد"
+        },
+        "concurrencyFailure": "Another user modified this data at the same time as you. Your changes were rejected.",
+        "validation": "Validation error on the server.",
+        "server.not.reachable": "Server not reachable",
+        "url.not.found": "Not found",
+        "NotNull": "Field {{ fieldName }} cannot be empty!",
+        "Size": "Field {{ fieldName }} does not meet min/max size requirements!",
+        "userexists": "Login name already used!",
+        "emailexists": "Email is already in use!",
+        "idexists": "A new {{ entityName }} cannot already have an ID",
+        "idnull": "Invalid ID",
+        "thisFieldIsRequired": "این فیلد اجباری است",
+        "pleaseEnterAllMandatoryFields": "لطفا تمامی مقادیر اجباری را با وارد نمایید",
+        "file": {
+            "could.not.extract": "Could not extract file",
+            "not.image": "File was expected to be an image but was found to be \"{{ fileType }}\""
+        }
+    },
+    "login": {
+        "title": "ورود",
+        "form": {
+            "username": "نام کاربری",
+            "username.placeholder": "رمزعبور",
+            "password": "رمزعبور",
+            "password.placeholder": "رمزعبور شما",
+            "rememberMe": "مرا بخاطر بسپار",
+            "forgetPassword": "رمز خود را فراموش کردم",
+            "button": "ورود"
+        },
+        "messages": {
+            "error": {
+                "authentication": "<strong>خطا در هنگام ورد!</strong> لطفا نام‌کاربری و رمزعبور خود را چک کنید و دوباره تلاش  کنید"
+            }
+        },
+        "password": {
+            "forgot": "آیا رمزعبور خود را فراموش کردید؟"
+        }
+    },
+    "settings": {
+        "title": "تنظیمات کاربر برای [<strong>{{username}}</strong>]",
+        "form": {
+            "firstname": "نام",
+            "firstname.placeholder": "نام شما",
+            "lastname": "نام خانوادگی",
+            "lastname.placeholder": "نام خانوادگی شما",
+            "language": "زبان",
+            "button": "ذخیره"
+        },
+        "messages": {
+            "error": {
+                "fail": "<strong>یک خطا رخ داد!</strong> تنظیمات ذخیره نشد.",
+                "emailexists": "<strong>این ایمیل در حال حاضر ثبت شده است!</strong> لطفا ایمیل دیگری انتخاب کنید."
+            },
+            "success": "<strong>تنظیمات ذخیره شد!</strong>",
+            "validate": {
+                "firstname": {
+                    "required": "نام شما مورد نیاز است.",
+                    "minlength": "نام شما باید حداقل ۱ کرکتر باشد.",
+                    "maxlength": "نام شما نباید بیش از ۵۰ کرکتر باشد."
+                },
+                "lastname": {
+                    "required": "نام خانوادگی مورد نیاز است.",
+                    "minlength": "نام خانوادگی باید حداقل ۱ کرکتر باشد.",
+                    "maxlength": "نام خانوادگی نباید بیش از ۵۰ کرکتر باشد."
+                }
+            }
+        }
+    },
+    "footer": "این پاورقی است",
+    "productGroup": {
+        "selectAnItem": "موردی انتخاب کنید"
+    }
+}

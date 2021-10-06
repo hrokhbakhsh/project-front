@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+
+/* Importing Bootstrap SCSS file. */
+@import './assets/fonts/iranSansWeb/css/style.css';
+@import '~bootstrap/scss/bootstrap';
+@import './assets/styles/palettes/default-pallet';
+@import './src/app/layouts/shared/styles/default-layout';
+@import './assets/styles/rtl';
+@import "assets/styles/palettes/colors";
+@import './assets/styles/global';
+@import './assets/styles/custome-material';
+
+
+@import "assets/styles/cards";
+
+

@@ -1,0 +1,183 @@
+<pmt-card
+  title="{{'pages.customer-management.legal-person.definition-legal-person.definition-legal-person-title' | translate}}"
+  color="card-header-info">
+
+  <form [formGroup]="form" (ngSubmit)="submitted()">
+    <div class="row">
+      <div class="col-3 text-uppercase">
+        {{ 'pages.customer-management.legal-person.definition-legal-person.code' | translate}}
+      </div>
+      <div class="col-9">
+        <hr>
+      </div>
+    </div>
+
+    <div class="row" formGroupName="code">
+      <div class="col-xl-4 col-md-4">
+        <pmt-input
+          [label]="'pages.customer-management.legal-person.definition-legal-person.personal-code' | translate"
+          formControlName="personalCode">
+        </pmt-input>
+      </div>
+      <div class="col-xl-4 col-md-4">
+        <pmt-input
+          [label]="'pages.customer-management.legal-person.definition-legal-person.national-father-code' | translate"
+          formControlName="nationalFatherCode">
+        </pmt-input>
+      </div>
+      <div class="col-xl-4 col-md-4">
+        <pmt-input
+          [label]="'pages.customer-management.legal-person.definition-legal-person.sub-code' | translate"
+          formControlName="subCode">
+        </pmt-input>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3 text-uppercase">
+        {{ 'pages.customer-management.legal-person.definition-legal-person.Legal-entity-information' | translate}}
+      </div>
+      <div class="col-9">
+        <hr>
+      </div>
+    </div>
+    <div class="row" formGroupName="LegalEntityInformation">
+      <div class="col-xl-6 col-md-6">
+        <pmt-input
+          [label]="'pages.customer-management.legal-person.definition-legal-person.title' | translate"
+          formControlName="title">
+        </pmt-input>
+      </div>
+      <div class="col-xl-6 col-md-6">
+        <pmt-input
+          [label]="'pages.customer-management.legal-person.definition-legal-person.name' | translate"
+          formControlName="name">
+        </pmt-input>
+      </div>
+      <div class="col-xl-6 col-md-6">
+        <pmt-input
+          [label]="'pages.customer-management.legal-person.definition-legal-person.nick-name' | translate"
+          formControlName="nickName">
+        </pmt-input>
+      </div>
+      <div class="col-xl-6 col-md-6">
+        <pmt-date
+          [label]="'pages.customer-management.legal-person.definition-legal-person.established-date' | translate"
+          formControlName="establishedDate">
+        </pmt-date>
+      </div>
+      <div class="col-xl-6 col-md-6">
+        <pmt-input
+          [label]="'pages.customer-management.legal-person.definition-legal-person.status-basic-knowledge' | translate"
+          formControlName="statusBasicKnowledge">
+        </pmt-input>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-3 text-uppercase">
+        {{ 'pages.customer-management.legal-person.definition-legal-person.Legal-entity-information' | translate}}
+      </div>
+      <div class="col-9">
+        <hr>
+      </div>
+    </div>
+    <div class="row" formGroupName="RegistrationInformation">
+      <div class="col-xl-6 col-md-6">
+        <pmt-input
+          [label]="'pages.customer-management.legal-person.definition-legal-person.registration-number' | translate"
+          formControlName="registrationNumber">
+        </pmt-input>
+      </div>
+      <div class="col-xl-6 col-md-6">
+        <pmt-input
+          [label]="'pages.customer-management.legal-person.definition-legal-person.code-insurance' | translate"
+          formControlName="codeInsurance">
+        </pmt-input>
+      </div>
+      <div class="col-xl-6 col-md-6">
+        <pmt-list
+          [options]="legalSituationOption"
+          [label]="'pages.customer-management.legal-person.definition-legal-person.legal-status' | translate"
+          formControlName="legalStatus">
+        </pmt-list>
+      </div>
+      <div class="col-xl-6 col-md-6">
+        <pmt-input
+          [label]="'pages.customer-management.legal-person.definition-legal-person.economic-code' | translate"
+          formControlName="economicCode">
+        </pmt-input>
+      </div>
+      <div class="col-xl-6 col-md-6">
+        <pmt-list
+          [options]="typeLegalEntityOption"
+          [label]="'pages.customer-management.legal-person.definition-legal-person.type-legal-entity' | translate"
+          formControlName="typeLegalEntity">
+        </pmt-list>
+      </div>
+      <div class="col-xl-6 col-md-6">
+        <pmt-input
+          [label]="'pages.customer-management.legal-person.definition-legal-person.current-status-person' | translate"
+          formControlName="currentStatusPerson">
+        </pmt-input>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-3 text-uppercase">
+        {{ 'pages.customer-management.legal-person.definition-legal-person.registration-contact' | translate}}
+      </div>
+      <div class="col-9">
+        <hr>
+      </div>
+    </div>
+    <div class="row" formGroupName="RegistrationContact">
+      <div class="col-xl-6 col-md-6">
+        <pmt-input
+          [label]="'pages.customer-management.legal-person.definition-legal-person.address' | translate"
+          formControlName="address">
+        </pmt-input>
+      </div>
+      <div class="col-xl-6 col-md-6">
+        <pmt-input
+          [label]="'pages.customer-management.legal-person.definition-legal-person.postal-code' | translate"
+          formControlName="postalCode">
+        </pmt-input>
+      </div>
+      <div class="col-xl-6 col-md-6">
+        <pmt-input
+          [label]="'pages.customer-management.legal-person.definition-legal-person.email' | translate"
+          formControlName="email">
+        </pmt-input>
+      </div>
+      <div class="col-xl-6 col-md-6">
+        <pmt-input
+          [label]="'pages.customer-management.legal-person.definition-legal-person.mail-box' | translate"
+          formControlName="mailBox">
+        </pmt-input>
+      </div>
+      <div class="col-xl-6 col-md-6">
+        <pmt-input
+          [label]="'pages.customer-management.legal-person.definition-legal-person.mobile-number' | translate"
+          formControlName="mobileNumber">
+        </pmt-input>
+      </div>
+      <div class="col-xl-6 col-md-6">
+        <pmt-input
+          [label]="'pages.customer-management.legal-person.definition-legal-person.fax' | translate"
+          formControlName="fax">
+        </pmt-input>
+      </div>
+      <div class="col-xl-6 col-md-6">
+        <pmt-input
+          [label]="'pages.customer-management.legal-person.definition-legal-person.phone' | translate"
+          formControlName="phone">
+        </pmt-input>
+      </div>
+
+    </div>
+    <pmt-button type="ADD"></pmt-button>
+    <pmt-button type="EDIT"></pmt-button>
+
+  </form>
+</pmt-card>

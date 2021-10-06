@@ -1,0 +1,15 @@
+<div class="layout-wrapper" [ngClass]="{'p-input-filled': config.inputStyle === 'filled', 'p-ripple-disabled': !config.ripple}">
+    <app-topbar (menuButtonClick)="onMenuButtonClick()"></app-topbar>
+    <app-menu *ngIf="isUserAuthenticated" [active]="menuActive" (afterItemClick)="hideMenu()"></app-menu>
+    <div *ngIf="isUserAuthenticated" class="layout-mask" [ngClass]="{'layout-mask-active': menuActive}" (click)="onMaskClick()"></div>
+
+    <div *ngIf="isUserAuthenticated" [class]="'layout-content ' + addRtlClass">
+        <router-outlet></router-outlet>
+        <app-footer></app-footer>
+    </div>
+
+    <div *ngIf="!isUserAuthenticated" [class]="'login ' + addRtlClass">
+        <router-outlet></router-outlet>
+    </div>
+    <app-footer *ngIf="!isUserAuthenticated"></app-footer>
+</div>

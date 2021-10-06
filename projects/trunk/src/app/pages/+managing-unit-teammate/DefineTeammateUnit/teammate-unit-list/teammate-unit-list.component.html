@@ -1,0 +1,113 @@
+<pmt-card title="{{'pages.unit-teammate.define-teammate-unit.list-teammate.list-teammate-unit-title' | translate}}">
+  <form [formGroup]="teammateUnitList" (ngSubmit)="submitted()">
+    <div class="row">
+      <div class="col-xl-6 col-md-12">
+        <pmt-input
+          [label]="'pages.unit-teammate.define-teammate-unit.list-teammate.teammate-unit' | translate"
+          formControlName="teammateUnit">
+        </pmt-input>
+      </div>
+      <div class="col-xl-6 col-md-12">
+        <pmt-list
+          [options]="unitTypeOption"
+          [label]="'pages.unit-teammate.define-teammate-unit.list-teammate.teammate-unit-type' | translate"
+          formControlName="teammateUnitType">
+        </pmt-list>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-xl-6 col-md-12">
+        <pmt-list
+          [options]="yesOrNo"
+          [label]="'pages.unit-teammate.define-teammate-unit.list-teammate.is-the-information-of-the-teammate-units-displayed' | translate"
+          formControlName="informationTeammateUnits">
+        </pmt-list>
+      </div>
+      <div class="col-xl-6 col-md-12">
+        <pmt-list
+          [options]="yesOrNo"
+
+          [label]="'pages.unit-teammate.define-teammate-unit.list-teammate.show-previous-records-of-teammate-unit' | translate"
+          formControlName="previousRecordsTeammateUnit">
+        </pmt-list>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3 col-md-3">
+        <button class="btn btn-info"> {{ 'pages.grouping-person.grouping-person.search' | translate}}</button>
+      </div>
+      <div class="col-xs-9 col-md-9">
+        <hr>
+      </div>
+
+    </div>
+    <div class="row">
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+        <ng-container matColumnDef="row">
+          <th mat-header-cell
+              *matHeaderCellDef> {{ 'pages.unit-teammate.define-teammate-unit.list-teammate.row' | translate}} </th>
+          <td mat-cell *matCellDef="let element"> {{element.row}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="teammateTitle">
+          <th mat-header-cell
+              *matHeaderCellDef> {{ 'pages.unit-teammate.define-teammate-unit.list-teammate.teammate-unit-title' | translate}} </th>
+          <td mat-cell *matCellDef="let element"> {{element.teammateTitle}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="teammateType">
+          <th mat-header-cell
+              *matHeaderCellDef> {{ 'pages.unit-teammate.define-teammate-unit.list-teammate.teammate-unit-type' | translate}} </th>
+          <td mat-cell *matCellDef="let element"> {{element.teammateType}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="teammateDrgree">
+          <th mat-header-cell
+              *matHeaderCellDef> {{ 'pages.unit-teammate.define-teammate-unit.list-teammate.teammate-unit-degree' | translate}}  </th>
+          <td mat-cell *matCellDef="let element"> {{element.teammateDrgree}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="upstream">
+          <th mat-header-cell
+              *matHeaderCellDef> {{ 'pages.unit-teammate.define-teammate-unit.list-teammate.upstream-unit' | translate}} </th>
+          <td mat-cell *matCellDef="let element"> {{element.upstream}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="teammateStatus">
+          <th mat-header-cell
+              *matHeaderCellDef> {{ 'pages.unit-teammate.define-teammate-unit.list-teammate.status-teammate-unit' | translate}} </th>
+          <td mat-cell *matCellDef="let element"> {{element.teammateStatus}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="show">
+          <th mat-header-cell *matHeaderCellDef> {{ 'global.show' | translate}} </th>
+          <td mat-cell *matCellDef="let element"> {{element.show}}
+            <mat-icon>visibility</mat-icon>
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="edit">
+          <th mat-header-cell *matHeaderCellDef> {{ 'global.edit' | translate}} </th>
+          <td mat-cell *matCellDef="let element"> {{element.edit}}
+            <mat-icon>edit</mat-icon>
+          </td>
+        </ng-container>
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      <div class="row mt-3">
+
+        <pmt-button type="ADD"></pmt-button>
+        <pmt-button type="DELETE"></pmt-button>
+
+
+      </div>
+
+
+    </div>
+
+  </form>
+</pmt-card>

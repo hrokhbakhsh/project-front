@@ -1,0 +1,165 @@
+<pmt-card title="{{'pages.customer-management.real-person.define-real-person-Title' | translate}}">
+  <form [formGroup]="form" (ngSubmit)="submitted()">
+    <div class="row">
+      <pmt-input
+        class="col-12"
+        [label]="'pages.customer-management.real-person.personal-code' | translate"
+        formControlName="personalCode">
+      </pmt-input>
+    </div>
+    <div class="row">
+      <div class="col-3 text-uppercase">
+        {{ 'pages.customer-management.real-person.personal-information' | translate}}
+      </div>
+      <div class="col-9">
+        <hr>
+      </div>
+    </div>
+    <div class="row" formGroupName="personalInformation">
+
+
+      <div class="col-xl-6 col-md-6">
+        <pmt-input
+          [label]="'pages.customer-management.real-person.name' | translate"
+          formControlName="name">
+        </pmt-input>
+      </div>
+      <div class="col-xl-6 col-md-6">
+        <pmt-input
+          [label]="'pages.customer-management.real-person.family' | translate"
+          formControlName="family">
+        </pmt-input>
+      </div>
+      <div class="col-xl-6 col-md-6">
+        <pmt-input
+          [label]="'pages.customer-management.real-person.father' | translate"
+          formControlName="father">
+        </pmt-input>
+      </div>
+      <div class="col-xl-6 col-md-6">
+        <pmt-input
+          [label]="'pages.customer-management.real-person.certificate-id' | translate"
+          formControlName="certificate">
+        </pmt-input>
+      </div>
+
+      <div class="col-xl-6 col-md-6">
+        <pmt-input
+          [label]="'pages.customer-management.real-person.id-card' | translate"
+          formControlName="idCard">
+        </pmt-input>
+      </div>
+      <div class="col-xl-6 col-md-6">
+        <pmt-input
+          [label]="'pages.customer-management.real-person.passport-id' | translate"
+          formControlName="passportId">
+        </pmt-input>
+      </div>
+      <div class="col-xl-6 col-md-6">
+        <pmt-input
+          [label]="'pages.customer-management.real-person.current-status' | translate"
+          formControlName="currentStatus">
+        </pmt-input>
+      </div>
+      <div class="col-xl-6 col-md-6">
+        <pmt-input
+          [label]="'pages.customer-management.real-person.place-issue' | translate"
+          formControlName="placeIssue">
+        </pmt-input>
+      </div>
+      <div class="col-xl-6 col-md-6">
+        <pmt-input
+          [label]="'pages.customer-management.real-person.year-issue' | translate"
+          formControlName="yearIssue">
+        </pmt-input>
+      </div>
+      <div class="col-xl-6 col-md-6">
+        <pmt-date
+          [label]="'pages.customer-management.real-person.birth-date' | translate"
+          formControlName="birthDate">
+        </pmt-date>
+      </div>
+      <div class="col-xl-6 col-md-6 d-flex align-items-center justify-content-start">
+        <pmt-radio
+          [label]="'pages.customer-management.real-person.sex' | translate"
+          [options]="option"
+          formControlName="sex">
+        </pmt-radio>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-3 text-uppercase">
+        {{ 'pages.customer-management.real-person.contacts' | translate}}
+      </div>
+      <div class="col-9">
+        <hr>
+      </div>
+    </div>
+    <div class="row" formGroupName="contacts">
+      <div class="col-xl-6 col-md-6">
+        <pmt-input
+          [label]="'pages.customer-management.real-person.address' | translate"
+          formControlName="address">
+        </pmt-input>
+      </div>
+      <div class="col-xl-6 col-md-6">
+        <pmt-list
+          [label]="'pages.customer-management.real-person.city' | translate"
+          formControlName="city">
+        </pmt-list>
+      </div>
+      <div class="col-xl-6 col-md-6">
+
+        <pmt-input
+          [label]="'pages.customer-management.real-person.postal-code' | translate"
+          formControlName="postalCode">
+        </pmt-input>
+      </div>
+      <div class="col-xl-6 col-md-6">
+
+        <pmt-input
+          [label]="'pages.customer-management.real-person.email' | translate"
+          formControlName="email">
+        </pmt-input>
+
+      </div>
+      <div class="col-xl-6 col-md-6">
+        <pmt-input
+          [label]="'pages.customer-management.real-person.mail-box' | translate"
+          formControlName="mailBox">
+        </pmt-input>
+      </div>
+
+
+      <div class="col-xl-6 col-md-6">
+        <pmt-input
+          [label]="'pages.customer-management.real-person.mobile-number' | translate"
+          formControlName="mobileNumber">
+        </pmt-input>
+
+      </div>
+      <div class="col-xl-6 col-md-6">
+        <pmt-input
+          [label]="'pages.customer-management.real-person.fax' | translate"
+          formControlName="fax">
+        </pmt-input>
+      </div>
+      <div class="col-xl-6 col-md-6">
+        <pmt-input
+          [label]="'pages.customer-management.real-person.phone' | translate"
+          formControlName="phone">
+        </pmt-input>
+      </div>
+      <div class="col-xl-6 col-md-6">
+        <pmt-input
+          [label]="'pages.customer-management.real-person.work-address' | translate"
+          formControlName="workAdress">
+        </pmt-input>
+      </div>
+    </div>
+
+    <pmt-button type="ADD"></pmt-button>
+    <pmt-button type="EDIT"></pmt-button>
+  </form>
+</pmt-card>

@@ -1,0 +1,4 @@
+<button class="m-3" [pmtAddClassList]="getClass" mat-raised-button>
+  <mat-label class="text-capitalize pmt-btn-add" *ngIf="hasLabel">  {{defaultButton.label}}</mat-label>
+  <mat-icon *ngIf="hasIcon" >{{getIcon}}</mat-icon>
+</button>

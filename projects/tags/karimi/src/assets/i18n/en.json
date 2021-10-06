@@ -1,0 +1,203 @@
+{
+    "home": {
+        "title": "Payeshgaran M.T"
+    },
+    "global": {
+        "title": "PmtClient",
+        "browsehappy": "You are using an <strong>outdated</strong> browser. Please <a href=\"http://browsehappy.com/?locale=en\">upgrade your browser</a> to improve your experience.",
+        "menu": {
+            "home": "Home",
+            "account": {
+                "main": "Account",
+                "settings": "Settings",
+                "password": "Password",
+                "sessions": "Sessions",
+                "login": "Sign in",
+                "logout": "Sign out",
+                "register": "Register"
+            },
+            "language": "Language",
+            "farsi": "فارسی",
+            "english": "English"
+        },
+        "form": {
+            "username.label": "Username",
+            "username.placeholder": "Your username",
+            "currentpassword.label": "Current password",
+            "currentpassword.placeholder": "Current password",
+            "newpassword.label": "New password",
+            "newpassword.placeholder": "New password",
+            "confirmpassword.label": "New password confirmation",
+            "confirmpassword.placeholder": "Confirm the new password",
+            "email.label": "Email",
+            "email.placeholder": "Your email"
+        },
+        "messages": {
+            "info": {
+                "register": {
+                    "noaccount": "You don't have an account yet?",
+                    "link": "Register a new account"
+                }
+            },
+            "error": {
+                "dontmatch": "The password and its confirmation do not match!"
+            },
+            "validate": {
+                "newpassword": {
+                    "required": "Your password is required.",
+                    "minlength": "Your password is required to be at least 4 characters.",
+                    "maxlength": "Your password cannot be longer than 50 characters.",
+                    "strength": "Password strength:"
+                },
+                "confirmpassword": {
+                    "required": "Your confirmation password is required.",
+                    "minlength": "Your confirmation password is required to be at least 4 characters.",
+                    "maxlength": "Your confirmation password cannot be longer than 50 characters."
+                },
+                "email": {
+                    "required": "Your email is required.",
+                    "invalid": "Your email is invalid.",
+                    "minlength": "Your email is required to be at least 5 characters.",
+                    "maxlength": "Your email cannot be longer than 50 characters."
+                }
+            }
+        },
+        "field": {
+            "id": "ID",
+            "name": "Name",
+            "code": "Code",
+            "price": "Price",
+            "quantity": "Quantity",
+            "category": "Category",
+            "country": "Country",
+            "city": "City",
+            "username": "Username",
+            "search": "Search",
+            "amount": "Amount",
+            "sharePercent": "Share percent",
+            "description": "Description"
+        },
+        "item-count": "Showing {{first}} - {{second}} of {{total}} items.",
+        "footer": {
+            "copyright": "Copyright 2021 by Payeshgaran M.T. All Rights Reserved."
+        }
+    },
+    "entity": {
+        "action": {
+            "addblob": "Add blob",
+            "addimage": "Add image",
+            "back": "Back",
+            "cancel": "Cancel",
+            "delete": "Delete",
+            "edit": "Edit",
+            "open": "Open",
+            "save": "Save",
+            "view": "View"
+        },
+        "detail": {
+            "field": "Field",
+            "value": "Value"
+        },
+        "delete": {
+            "title": "Confirm delete operation"
+        },
+        "validation": {
+            "required": "This field is required.",
+            "minlength": "This field is required to be at least {{ min }} characters.",
+            "maxlength": "This field cannot be longer than {{ max }} characters.",
+            "min": "This field should be at least {{ min }}.",
+            "max": "This field cannot be more than {{ max }}.",
+            "minbytes": "This field should be at least {{ min }} bytes.",
+            "maxbytes": "This field cannot be more than {{ max }} bytes.",
+            "pattern": "This field should follow pattern for {{ pattern }}.",
+            "number": "This field should be a number.",
+            "datetimelocal": "This field should be a date and time.",
+            "patternLogin": "This field can only contain letters, digits and e-mail addresses."
+        },
+        "field": {
+            "datetime": "Date"
+        }
+    },
+    "error": {
+        "title": "Error page!",
+        "http": {
+            "400": "Bad request.",
+            "403": "You are not authorized to access this page.",
+            "404": "The page does not exist.",
+            "405": "The HTTP verb you used is not supported for this URL.",
+            "500": "Internal server error."
+        },
+        "concurrencyFailure": "Another user modified this data at the same time as you. Your changes were rejected.",
+        "validation": "Validation error on the server.",
+        "internalServerError": "Internal server error",
+        "server.not.reachable": "Server not reachable",
+        "url.not.found": "Not found",
+        "NotNull": "Field {{ fieldName }} cannot be empty!",
+        "Size": "Field {{ fieldName }} does not meet min/max size requirements!",
+        "userexists": "Login name already used!",
+        "emailexists": "Email is already in use!",
+        "idexists": "A new {{ entityName }} cannot already have an ID",
+        "idnull": "Invalid ID",
+        "thisFieldIsRequired": "This field is required",
+        "pleaseEnterAllMandatoryFields": "Please enter all mandatory fields",
+        "file": {
+            "could.not.extract": "Could not extract file",
+            "not.image": "File was expected to be an image but was found to be \"{{ fileType }}\""
+        }
+    },
+    "login": {
+        "title": "Sign in",
+        "form": {
+            "username": "Username",
+            "username.placeholder": "Your username",
+            "password": "Password",
+            "password.placeholder": "Your password",
+            "rememberMe": "Remember me",
+            "forgetPassword": "Forget password",
+            "button": "Sign in"
+        },
+        "messages": {
+            "error": {
+                "authentication": "<strong>Failed to sign in!</strong> Please check your credentials and try again."
+            }
+        },
+        "password": {
+            "forgot": "Did you forget your password?"
+        }
+    },
+    "settings": {
+        "title": "User settings for [<strong>{{username}}</strong>]",
+        "form": {
+            "firstname": "First Name",
+            "firstname.placeholder": "Your first name",
+            "lastname": "Last Name",
+            "lastname.placeholder": "Your last name",
+            "language": "Language",
+            "button": "Save"
+        },
+        "messages": {
+            "error": {
+                "fail": "<strong>An error has occurred!</strong> Settings could not be saved.",
+                "emailexists": "<strong>Email is already in use!</strong> Please choose another one."
+            },
+            "success": "<strong>Settings saved!</strong>",
+            "validate": {
+                "firstname": {
+                    "required": "Your first name is required.",
+                    "minlength": "Your first name is required to be at least 1 character",
+                    "maxlength": "Your first name cannot be longer than 50 characters"
+                },
+                "lastname": {
+                    "required": "Your last name is required.",
+                    "minlength": "Your last name is required to be at least 1 character",
+                    "maxlength": "Your last name cannot be longer than 50 characters"
+                }
+            }
+        }
+    },
+    "footer": "This is your footer",
+    "productGroup": {
+        "selectAnItem": "Select an item"
+    }
+
+}

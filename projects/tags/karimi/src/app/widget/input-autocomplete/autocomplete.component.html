@@ -1,0 +1,23 @@
+<div [class]="'p-field p-input-filled ' + containerCssClass">
+    <label style="display: inline-block" [for]="id" [pmtTranslate]="label"></label>
+    <span *ngIf="isRequired" style="color: red"> * </span>:<br>
+
+    <p-autoComplete [id]="id"
+                    [(ngModel)]="value"
+                    [suggestions]="suggestions"
+                    (completeMethod)="completeMethodEvent($event)"
+                    [field]="field"
+                    [class]="isInvalid() ? 'ng-invalid ng-dirty' : ''"
+                    [dropdown]="true">
+        <ng-template let-item pTemplate="item">
+            <div>{{item[field]}}</div>
+        </ng-template>
+    </p-autoComplete>
+
+
+    <small *ngIf="isInvalid()"
+           [id]="id + '-error'"
+           class="p-error display-block"
+           pmtTranslate="error.thisFieldIsRequired">This field is required</small>
+
+</div>

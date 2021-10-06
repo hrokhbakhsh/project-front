@@ -1,0 +1,56 @@
+<div class="login-container">
+
+    <div class="wrap-login">
+        <div class="login-title" pmtTranslate="login.title">Sign In</div>
+        <div class="login-content">
+            <div class="p-grid p-fluid ">
+                <div class="p-col-12">
+                    <p-messages [(value)]="messages"></p-messages>
+                </div>
+                <div class="p-col-12">
+                    <app-input-text id="username"
+                                    [isRequired]="true"
+                                    [(ngModel)]="loginModel.username"
+                                    label="login.form.username"
+                                    iconDirection="left"
+                                    icon="user">
+                    </app-input-text>
+                </div>
+                <div class="p-col-12">
+                    <app-input-password id="password"
+                                        [isRequired]="true"
+                                        [(ngModel)]="loginModel.password"
+                                        label="login.form.password"
+                                        iconDirection="left"
+                                        icon="lock">
+                    </app-input-password>
+                </div>
+                <div class="p-col-12 p-md-6">
+                    <div class="p-field">
+                        <div class="p-field-checkbox">
+                            <p-checkbox name="rememberMe"
+                                        [value]="true"
+                                        [binary]="true"
+                                        [(ngModel)]="loginModel.rememberMe"
+                                        inputId="rememberMe"></p-checkbox>
+                            <label for="rememberMe" pmtTranslate="login.form.rememberMe">Remember me</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-col-12 p-md-6" style="text-align: end">
+                    <a [routerLink]="['/forget-password']">
+                        <span pmtTranslate="login.form.forgetPassword">Forget Password</span>
+                    </a>
+                </div>
+                <div class="p-col-12">
+                    <p-button [style]="{'margin': '7px'}"
+                              styleClass="p-button-rounded p-button-primary"
+                              [label]="'login.title' | translate"
+                              (click)="login()">
+                    </p-button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

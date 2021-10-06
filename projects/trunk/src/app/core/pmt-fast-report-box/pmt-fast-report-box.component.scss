@@ -1,0 +1,76 @@
+:host{
+  display: block;
+  man-width: 14rem;
+}
+
+
+
+/* card image section  */
+
+.card__image-header{
+  height: 6rem;
+  width: 6rem;
+  background: var(--cyan);
+  transform: translateY(-2rem);
+  box-shadow: .1rem .1rem .1rem var(--cyan);
+  border-radius: .2rem;
+}
+.card__header-media{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.card__mat-icon{
+  width: 100%;
+  height: 100%;
+}
+
+
+/* card image section  */
+
+
+.card-footer{
+  .d-flex> div{
+    margin: 0 .3rem;
+  }
+}
+.card__link {
+  line-height: 1.5rem;
+  text-decoration: none;
+  align-items: center;
+  display: flex;
+  .mat-icon{
+    font-size: inherit;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+
+/*angular material card*/
+
+mat-card {
+  max-width: 22rem;
+  min-width: 15rem;
+
+}
+
+
+
+
+
+mat-card-header{
+  position: relative;
+}
+.header{
+  height: 5rem;
+  width: 100%;
+
+}
+
+.example-header-image {
+  background-size: cover;
+}
+
+
+

@@ -1,0 +1,32 @@
+<div class="default-sidebar-header mb-2">
+  <div *ngIf="userAccount && userAccount?.token; then userIsAuthorized; else userUnAuthorized"></div>
+</div>
+<ng-template #userIsAuthorized>
+
+  <div class="default-sidebar-header--profile-header d-flex flex-row justify-content-between ">
+    <img src="../../../../../assets/images/logo/pmt-logo.png" class="default-sidebar-header--project-logo" alt="PMT Logo">
+
+
+    <pmt-sidebar-toggle [parentName]="btnClosePositionEnum.SIDEBAR"></pmt-sidebar-toggle>
+  </div>
+
+  <div class="d-flex flex-column  text-center">
+    <p class="mt-3 mr-4">
+      <mat-icon class="" style="font-size: 55px">account_circle</mat-icon>
+    </p>
+    <p>
+      <span>{{ userAccount?.firstName }}</span>
+      &nbsp;
+      <span>{{ userAccount?.lastName }}</span>
+    </p>
+  </div>
+</ng-template>
+
+<ng-template #userUnAuthorized>
+  <div class="d-flex flex-column  text-center">
+    <p class="mt-3">
+      <mat-icon class="" style="font-size: 55px; margin: 15px auto">lock</mat-icon>
+    </p>
+    <p class="p-2">شما در حال حاضر لاگین نمی باشید.</p>
+  </div>
+</ng-template>

@@ -1,0 +1,20 @@
+<div class="content-section">
+    <div class="feature-intro">
+        <h1 pmtTranslate="home.title">Dynamic component</h1>
+        <div class="p-grid">
+            <div class="p-col-12" *ngFor="let item of dynamicComponents">
+
+
+                <div class="p-field" [ngSwitch]="item.type">
+                    <input *ngSwitchCase="'TEXT'" pInputText [id]="item.id" [(ngModel)]="item.value" [name]="item.name">
+                    <p-inputNumber *ngSwitchCase="'NUMBER'" [id]="item.id" [(ngModel)]="item.value" [name]="item.name"></p-inputNumber>
+                    <input *ngSwitchCase="'DATE'" pInputText
+                           [id]="item.id" [(ngModel)]="item.value" [name]="item.name" theme="dp-material" [dpDayPicker]="datePickerConfig">
+                    <textarea *ngSwitchCase="'TEXTAREA'" pInputTextarea [id]="item.id" [(ngModel)]="item.value" [name]="item.name"></textarea>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>

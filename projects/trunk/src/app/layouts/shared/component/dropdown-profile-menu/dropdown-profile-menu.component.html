@@ -1,0 +1,28 @@
+<button mat-icon-button  [matMenuTriggerFor]="menu"><mat-icon class="">folder_shared</mat-icon></button>
+
+<mat-menu #menu="matMenu" class="dropdown-profile">
+  <p class="p-2 text-center ">
+    <span>{{ userAccount?.firstName }}</span>
+    &nbsp;
+    <span>{{ userAccount?.lastName }}</span>
+  </p>
+  <hr>
+  <button mat-menu-item routerLink="/profile">
+    <mat-icon>folder_shared</mat-icon>
+    <span translate="global.profile"></span>
+  </button>
+  <button mat-menu-item (click)="openDialogSetting()">
+    <mat-icon>manage_accounts</mat-icon>
+    <span translate="global.settings"></span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>email</mat-icon>
+    <span translate="global.messages"></span>
+  </button>
+  <hr>
+  <button mat-menu-item (click)="logout()">
+    <mat-icon>logout</mat-icon>
+    <span translate="global.logout"></span>
+  </button>
+
+</mat-menu>

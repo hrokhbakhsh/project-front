@@ -1,0 +1,45 @@
+<mat-card  [ngClass]="mainClass()" class="mb-5">
+  <div class="header">
+      <div class="row">
+        <div class="col-4">
+          <div class="row">
+            <div class="col-12 ">
+              <p class="d-flex  text-left"   [pmtAddClassList]="titleClass">
+                {{option?.title}}
+              </p>
+            </div>
+            <div class="col-12 ">
+              <p class="d-flex text-left">
+                {{option?.subtitle}}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-8  card__header-media">
+          <div  [pmtAddClassList]="avatarClass"
+            class="card__image-header">
+            <mat-icon class="card__mat-icon d-flex justify-content-center align-items-center"   *ngIf="option?.avatar?.image" [style.font-size]="avatarIconSize"
+                      aria-hidden="false"
+                      aria-label="Example home icon ">{{avatarIcon}}</mat-icon>
+          </div>
+          <div
+            *ngIf="!option?.avatar?.image"
+            [ngStyle]="{'background-image': 'url(' + option?.avatar?.image + ')'}"
+            class="card__image-header example-header-image">
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <mat-card-content *ngIf="option?.text">
+    <p>{{option?.text}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <div *ngFor="let action of option?.actions">
+      <a [ngClass]="action?.class?[action?.class]:['text-dark']" class="card__link" [href]="action?.url">
+        <mat-icon *ngIf="action?.icon" aria-hidden="false">{{action?.icon}}</mat-icon>
+        <span *ngIf="action.title" class="ml-1 mr-1">{{action?.title}}</span>
+      </a>
+    </div>
+  </mat-card-actions>
+</mat-card>

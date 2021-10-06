@@ -1,0 +1,9 @@
+<div class="card">
+  <div class="card-header " [class]="color" *ngIf="showTitle">
+    <h4 class="card-title ">{{title}}</h4>
+    <p class="card-category"> {{subTitle}}</p>
+  </div>
+  <div class="card-body">
+    <ng-content></ng-content>
+  </div>
+</div>

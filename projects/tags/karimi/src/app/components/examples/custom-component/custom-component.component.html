@@ -1,0 +1,67 @@
+<div class="content-section">
+    <div class="feature-intro">
+        <h1>Custom component</h1>
+        <div class="p-grid p-fluid">
+
+            <div class="p-col-12 p-md-6 p-lg-6">
+                <app-input-number id="id"
+                                  label="global.field.id"
+                                  [isRequired]="true"
+                                  [(ngModel)]="product.id">
+                </app-input-number>
+            </div>
+
+            <div class="p-col-12 p-md-6 p-lg-6">
+                <app-input-text id="code"
+                                label="global.field.code"
+                                [(ngModel)]="product.code">
+                </app-input-text>
+            </div>
+
+            <div class="p-col-12 p-md-6 p-lg-6">
+                <app-input-text id="name"
+                                label="global.field.name"
+                                [isRequired]="true"
+                                [(ngModel)]="product.name">
+                </app-input-text>
+            </div>
+
+            <div class="p-col-12 p-md-6 p-lg-6">
+                <app-input-number id="price"
+                                  [isRequired]="true"
+                                  label="global.field.price"
+                                  [(ngModel)]="product.price">
+                </app-input-number>
+            </div>
+
+            <div class="p-col-12 p-md-6 p-lg-6">
+                <app-input-number id="quantity"
+                                  label="global.field.quantity"
+                                  [(ngModel)]="product.quantity">
+                </app-input-number>
+            </div>
+
+            <div class="p-col-12 p-md-6 p-lg-6">
+                <app-input-dropdown id="category"
+                                    label="global.field.category"
+                                    [options]="categories"
+                                    optionLabel="name"
+                                    [(ngModel)]="product.category">
+                </app-input-dropdown>
+            </div>
+
+        </div>
+        <div class="p-grid p-fluid" style="padding-top: 7px">
+            <p-button label="Save"
+                      [style]="{margin: '5px'}"
+                      icon="pi pi-check"
+                      styleClass="p-button-rounded p-button-success"></p-button>
+
+            <p-button label="Cancel"
+                      [style]="{margin: '5px'}"
+                      icon="pi pi-times"
+                      styleClass="p-button-rounded p-button-danger"></p-button>
+
+        </div>
+    </div>
+</div>

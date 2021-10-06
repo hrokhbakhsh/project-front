@@ -1,0 +1,9 @@
+<mat-card pmtMaximize #pmtBox="pmtMaximize">
+  <button mat-icon-button class="min-button"
+          (click)="pmtBox.toggle()">
+    <mat-icon *ngIf="!(pmtBox.isMaximized$ | async)" class="text-success">fullscreen</mat-icon>
+    <mat-icon *ngIf="pmtBox.isMaximized$ | async" class="text-danger">fullscreen_exit</mat-icon>
+  </button>
+
+  <ng-content></ng-content>
+</mat-card>

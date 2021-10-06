@@ -1,0 +1,67 @@
+<div class="p-grid">
+    <div class="p-col-4">
+        <div class="p-field">
+            <label for="id">ID:</label><br>
+            <input id="id" type="text"
+                   pInputText
+                   [(ngModel)]="product.id"/>
+        </div>
+    </div>
+    <div class="p-col-4">
+        <div class="p-field">
+            <label for="code">Code:</label><br>
+            <input id="code" type="text"
+                   pInputText
+                   [(ngModel)]="product.code"/>
+        </div>
+    </div>
+    <div class="p-col-4">
+        <div class="p-field">
+            <label for="name">Name:</label><br>
+            <input id="name" type="text"
+                   pInputText
+                   [(ngModel)]="product.name"/>
+        </div>
+    </div>
+</div>
+<div class="p-grid">
+    <div class="p-col-4">
+        <div class="p-field">
+            <label for="category">Category:</label><br>
+            <p-dropdown id="category"
+                        [options]="categories"
+                        [(ngModel)]="product.category"
+                        placeholder="Select a category"
+                        optionLabel="name"
+                        [style]="{'min-width': '2em'}"></p-dropdown>
+        </div>
+    </div>
+    <div class="p-col-4">
+        <div class="p-field">
+            <label for="price">Price:</label><br>
+            <input id="price" type="text"
+                   pInputText
+                   [(ngModel)]="product.price"/>
+        </div>
+    </div>
+    <div class="p-col-4">
+        <div class="p-field">
+            <label for="quantity">Quantity:</label><br>
+            <input id="quantity" type="text"
+                   pInputText
+                   [(ngModel)]="product.quantity"/>
+        </div>
+    </div>
+</div>
+<div class="p-grid">
+    <div class="p-col">
+        <p-button [style]="{'margin': '7px'}"
+                  (onClick)="update()"
+                  styleClass="p-button-rounded p-button-success"
+                  label="Update"></p-button>
+        <p-button [style]="{'margin': '7px'}"
+                  (onClick)="cancel()"
+                  styleClass="p-button-rounded p-button-danger"
+                  label="Cancel"></p-button>
+    </div>
+</div>

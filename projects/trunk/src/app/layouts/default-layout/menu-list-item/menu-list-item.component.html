@@ -1,0 +1,25 @@
+
+<a mat-list-item  (click)="onItemSelected(item)"
+   [ngClass]="{'active': item.route ? router.isActive(item.route, true): false, 'expanded': expanded}"
+   class="menu-list-item">
+   <div class="container-fluid">
+    <div class="row d-flex align-items-center m-0">
+      <div class="col-1 p-0 m-0">
+       <mat-icon class="routeIcon">{{item.iconName}}</mat-icon>
+      </div>
+      <div class="col-10 p-0 d-flex justify-content-start align-items-center">
+       <span  class="menu-list-item--text  d-flex justify-content-start align-items-center">{{item.displayName}}</span>
+       <span class="menu-list-item--extend-icon" *ngIf="!item.children"></span>
+      </div>
+      <div class="col-1 p-0">
+       <mat-icon class="menu-list-item--extend-icon" [@indicatorRotate]="expanded ? 'expanded': 'collapsed'" *ngIf="item.children && item.children.length">
+         expand_more
+       </mat-icon>
+      </div>
+    </div>
+   </div>
+</a>
+
+<div *ngIf="expanded" class="mx-2">
+  <pmt-menu-list-item class=" menu-list-item-child  " *ngFor="let child of item.children" [item]="child" [depth]="depth+1"></pmt-menu-list-item>
+</div>

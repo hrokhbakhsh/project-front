@@ -1,0 +1,74 @@
+ul {
+  list-style: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.fa {
+  padding: 18px;
+  text-align: center;
+  margin: 1px 7px;
+  font-size: 20px;
+  width: 50px;
+}
+
+.fa-facebook:hover {
+  color: cadetblue;
+  transition: .3s ease-in;
+}
+
+.fa-instagram:hover {
+  color: pink;
+  transition: .3s ease-in;
+}
+
+.fa-google:hover {
+  color: red;
+  transition: .3s ease-in;
+}
+
+.backGround_profile {
+  background-image: url('../../../assets/images/login/login-bgc.jpg');
+  filter: blur(8px);
+  height: 50vh;
+  background-size: cover;
+}
+
+.body_profile {
+  margin-top: -15rem;
+
+}
+
+.header_Profile h4 {
+  color: rgba(53, 53, 53, 0.651);
+}
+
+.heade_button button {
+  margin: 1px 7px;
+  font-size: 13px;
+
+}
+
+//Responsive
+
+@media only screen and (max-width: 768px) {
+  .body_profile {
+    text-align: center;
+  }
+  .fa {
+    padding: 15px;
+    text-align: center;
+    margin: initial;
+    font-size: 20px;
+    width: 50px;
+  }
+}
+
+
+
+
+
+

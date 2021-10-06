@@ -1,0 +1,73 @@
+<div class="content-section">
+    <div class="feature-intro">
+        <h1>Product group</h1>
+        <p-toast [style]="{marginTop: '80px'}"></p-toast>
+        <div class="p-grid p-fluid">
+
+            <div class="p-col-12 p-md-4">
+                <app-input-number id="id"
+                                  label="global.field.id"
+                                  [isRequired]="true"
+                                  [disabled]="!!productGroup.id"
+                                  [(ngModel)]="productGroup.id">
+                </app-input-number>
+            </div>
+            <div class="p-field p-col-12 p-md-4">
+                <app-input-text id="name"
+                                label="global.field.name"
+                                [isRequired]="true"
+                                [(ngModel)]="productGroup.name">
+                </app-input-text>
+            </div>
+            <div class="p-field p-col-12 p-md-4">
+                <app-input-dropdown id="category"
+                                    [isRequired]="false"
+                                    label="global.field.category"
+                                    [options]="categories"
+                                    optionLabel="name"
+                                    [(ngModel)]="selectedCategory">
+                </app-input-dropdown>
+            </div>
+
+        </div>
+        <div class="p-grid">
+            <div class="p-field p-col">
+                <p-button label="Save"
+                          icon="pi pi-check"
+                          (click)="save()"
+                          styleClass="p-button-rounded p-button-success">
+                </p-button>
+            </div>
+
+        </div>
+
+
+        <div class="p-fluid p-grid">
+            <div class="p-col">
+                <p-table [value]="productGroupList"
+                         [paginator]="true"
+                         [rows]="10"
+                         styleClass="p-datatable-striped">
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th>id</th>
+                            <th>Name
+                                <p-columnFilter type="text" field="name"></p-columnFilter>
+                            </th>
+                            <th>Category
+                                <p-columnFilter type="text" field="category"></p-columnFilter>
+                            </th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-product>
+                        <tr [pEditableRow]="product">
+                            <td>{{product.id}}</td>
+                            <td>{{product.name}}</td>
+                            <td>{{product.category}}</td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+            </div>
+        </div>
+    </div>
+</div>

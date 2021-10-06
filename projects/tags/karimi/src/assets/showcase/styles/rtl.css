@@ -1,0 +1,89 @@
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: normal;
+    src: url('fonts/IRANSans/eot/IRANSansWeb.eot');
+    src: url('fonts/IRANSans/eot/IRANSansWeb.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+    url('fonts/IRANSans/woff2/IRANSansWeb.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+    url('fonts/IRANSans/woff/IRANSansWeb.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('fonts/IRANSans/ttf/IRANSansWeb.ttf') format('truetype');
+    font-display: swap;
+}
+body {
+    font-family: IRANSans, 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !important;
+}
+.p-component {
+    font-family: IRANSans, 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !important;;
+}
+.layout-content.ui-rtl {
+    margin-right: 250px;
+    margin-left: 0;
+}
+.layout-sidebar.ui-rtl {
+    right: 0;
+    left: initial;
+    border-left: 1px solid var(--surface-d);
+    border-right: none;
+}
+.p-datatable .p-datatable-thead > tr > th {
+    text-align: center;
+}
+.p-column-filter-row .p-column-filter-menu-button, .p-column-filter-row .p-column-filter-clear-button {
+    margin-right: 0.5rem;
+}
+.p-datatable .p-datatable-tbody > tr > td {
+    text-align: center;
+}
+.p-datatable .p-paginator-bottom {
+    direction: ltr;
+}
+.p-button-icon.p-button-icon-left {
+    margin-left: 0.5rem;
+    margin-right: 0;
+}
+.p-button-icon.p-button-icon-right {
+    margin-left: 0;
+    margin-right: 0.5rem;
+}
+.p-autocomplete-dd .p-autocomplete-dropdown.p-button {
+    border-radius: 4px 0 0 4px;
+}
+.p-autocomplete-dd input.p-autocomplete-input, .p-autocomplete-dd input.p-autocomplete-multiple-container {
+    border-radius: 0 4px 4px 0;
+}
+img.flag {
+    margin-left: 0.5rem;
+    margin-right: 0;
+}
+.p-multiselect-panel .p-multiselect-items .p-multiselect-item .p-checkbox {
+    margin-right: 0;
+    margin-left: 0.5rem;
+}
+.p-dropdown .p-dropdown-clear-icon {
+    left: 2.357rem;
+    right: initial;
+}
+.p-dropdown.p-dropdown-clearable .p-dropdown-label {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+}
+.p-message .p-message-icon {
+    margin-right: 0;
+    margin-left: 0.5rem;
+}
+.p-message-close.p-link {
+    margin-left: 0 !important;
+    margin-right: auto;
+}
+@media screen and (max-width: 960px) {
+    .layout-content.ui-rtl {
+        margin-right: 0;
+    }
+    .layout-sidebar.ui-rtl {
+        transform: translateX(100%);
+    }
+    .layout-sidebar.ui-rtl.active {
+        transform: translateX(0);
+    }
+}
+

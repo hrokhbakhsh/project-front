@@ -1,0 +1,5 @@
+<button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="toggleSidenav()">
+  <mat-icon *ngIf="sidenavIsOpend && parentName === btnClosePositionEnum.SIDEBAR">close</mat-icon>
+  <mat-icon *ngIf="!sidenavIsOpend && parentName=== btnClosePositionEnum.HEADER">menu_open</mat-icon>
+</button>
+

@@ -1,0 +1,37 @@
+<pmt-card title="{{'pages.customer-management.real-person.inquiry-real-person-Title' | translate}}">
+  <form [formGroup]="form" (ngSubmit)="submitted()">
+    <div class="row">
+      <div class="col-xl-6 col-md-6">
+        <!--      <pmt-list
+                [label]="'real-person.nation' | translate"
+                formControlName="nation">
+              </pmt-list>-->
+        <pmt-list
+          [label]="'pages.customer-management.real-person.nation' | translate"
+          formControlName="nation">
+        </pmt-list>
+      </div>
+      <div class="col-xl-6 col-md-6">
+        <pmt-input
+          [label]="'pages.customer-management.real-person.id-card' | translate"
+          formControlName="idCard">
+        </pmt-input>
+      </div>
+
+      <div class="col-xl-6 col-md-6">
+        <pmt-date
+          [label]="'pages.customer-management.real-person.birth-date' | translate"
+          formControlName="birthDate">
+        </pmt-date>
+      </div>
+      <div class="col-xl-6 col-md-6">
+        <pmt-input
+          [label]="'pages.customer-management.real-person.foreign-national-code' | translate"
+          formControlName="foreignNationalCode">
+        </pmt-input>
+      </div>
+    </div>
+
+    <pmt-button type="ADD"></pmt-button>
+  </form>
+</pmt-card>

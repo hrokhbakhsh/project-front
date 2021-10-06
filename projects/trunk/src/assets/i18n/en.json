@@ -1,0 +1,237 @@
+{
+  "dir": "ltr",
+  "en": "English",
+  "global": {
+    "login": "Login",
+    "signup": "Sign Up",
+    "logout": "Logout",
+    "profile": "Profile ",
+    "settings": "Settings",
+    "delete": "Delete",
+    "update": "Refresh",
+    "edit": "Edit",
+    "add": "Add",
+    "show": "Show",
+    "messages": " Messages",
+    "more": "More",
+    "record": "Record",
+    "back": "Back",
+    "yes": "yes",
+    "no": "no"
+  },
+  "dashboard": {
+    "home": "home"
+  },
+  "layout": {
+    "message-list": {
+      "subheader": "New massages"
+    }
+  },
+  "form": {
+    "userName": "UserName",
+    "password": "Password",
+    "submit": "Submit",
+    "phone-number": "Phone Number ",
+    "mobile-number": " Mobile Number",
+    "email": "Email",
+    "address": "Address",
+    "confirm-password": "Confirm Password",
+    "postal-code": "Postal code",
+    "fax": "Fax",
+    "work-phone": "work phone",
+    "work-address": "work address",
+    "mail-box": "mail box"
+
+  },
+  "pages": {
+    "login": {
+      "title": "login",
+      "dont-have-an-account": "Don't have an account?",
+      "remember-me": "remember me",
+      "forgot-password": "forgot password"
+    },
+    "register": {
+      "do-you-have-an-account": "do you have account"
+    },
+    "forgot-password": {
+      "title": "refactor password"
+    },
+    "customer-management": {
+      "legal-person": {
+        "definition-legal-person": {
+          "definition-legal-person-title": "Definition legal person",
+          "code": "code",
+          "personal-code": "personal code",
+          "national-father-code": "national father code",
+          "sub-code": "sub code",
+          "Legal-entity-information": "Legal entity information",
+          "title": "title",
+          "name": "name",
+          "nick-name": "nick name",
+          "established-date": "Established date",
+          "status-basic-knowledge": "Status basic knowledge",
+          "registration-information": "Registration Information",
+          "registration-number": "Registration Number",
+          "code-insurance": "code insurance",
+          "legal-status": "legal Status",
+          "economic-code": "Economic Code",
+          "type-legal-entity": "Type Legal Entity",
+          "current-status-person": "current Status of Person",
+          "registration-contact": "Registration Contact",
+          "address": "address",
+          "postal-code": "postal Code",
+          "email": "email",
+          "mail-box": "mailBox",
+          "mobile-number": "mobile Number",
+          "fax": "fax",
+          "phone": "phone",
+          "addition": "addition",
+          "edition": "edit",
+          "governmental": "Governmental",
+          "personal": "personal",
+          "company": "Limited liability company"
+        },
+        "inquiry-legal-person": {
+          "id-card": "idCard",
+          "nation": "nation",
+          "national-father-id": "national Father Id",
+          "subsidiary-code": "subsidiary Code",
+          "foreign-national-code": "foreign National Code",
+          "Inquiry-legal-person": "Inquiry legal person"
+        }
+      },
+      "real-person": {
+
+        "define-real-person-Title": "Define real person",
+        "inquiry-real-person-Title": "Inquiry real person",
+        "personal-code": "personal code",
+        "personal-information": "personal information",
+        "certificate-id": "certificate id",
+        "title": "title",
+        "name": "name",
+        "family": "family",
+        "father": "father",
+        "id-card": "idCard",
+        "passport-id": "passport id cart",
+        "current-status": "current status",
+        "place-issue": "place of issue",
+        "year-issue": "year of issue",
+        "birth-date": "birth date",
+        "sex": "sex",
+        "latin-information": "english information",
+        "english-name": "english name",
+        "english-family": "english family",
+        "contacts": "contacts",
+        "address": "address",
+        "postal-code": "postal code",
+        "email": " email",
+        "mail-box": "mail box",
+        "mobile-number": " mobile number",
+        "fax": " fax",
+        "phone": "phone",
+        "female": "female",
+        "male": "male",
+        "nation": "nation",
+        "foreign-national-code": "foreign national code",
+        "city": "City",
+        "work-address": "work Address"
+      }
+    },
+    "grouping-person": {
+      "grouping-person": {
+        "grouping-personTitle": "Grouping person",
+        "type-person": "Type person",
+        "name-person": "Person name",
+        "national-code": "National code ",
+        "search": "Search",
+        "type-person-list": {
+          "real-person": "real person",
+          "legal-person": "legal-person"
+        }
+      }
+    },
+    "unit-teammate": {
+      "define-teammate-unit": {
+        "add-teammate": {
+          "add-teammate-unit-title": "Add teammate unit",
+          "code": "code",
+          "is-the-teammate-unit-active": "Is the teammate unit active?",
+          "sub-code": "Sub code ",
+          "teammate-unit-type": "teammate Unit Type",
+          "upstream": " upstream",
+          "geographic-location": "Geographic Location",
+          "effective-history": " effective History",
+          "central-insurance-unique-code": "Central Insurance UniqueCode",
+          "degree": "Degree",
+          "payment-credit-date": "Payment Credit Date ",
+          "title": "Title",
+          "issuance-of-license": "Issuance Of license",
+          "damage-license": "Damage License",
+          "permissions": " Permissions",
+          "personal-information": "Personal information"
+
+        },
+        "list-teammate": {
+          "list-teammate-unit-title": "List teammate unit",
+          "is-the-information-of-the-teammate-units-displayed": "Is the information of the teammate units displayed?",
+          "show-previous-records-of-teammate-unit": "Show previous records of teammate-uni?",
+          "teammate-unit": "Teammate unit",
+          "teammate-unit-title": "Teammate unit title",
+          "teammate-unit-degree": "Teammate unit degree",
+          "upstream-unit": "Upstream unit",
+          "status-teammate-unit": "Status of the teammate unit",
+          "row": "Row",
+          "search": "Search",
+          "teammate-unit-type": "Teammate unit type",
+          "teammate-unit-type-list": {
+            "headquarters": "Headquarters",
+            "state": "State",
+            "branch": "Branch",
+            "real-representation": "Real representation",
+            "representation-company": "Representation company",
+            "real-broker": "Real broker",
+            "legal-broker": "Legal broker",
+            "representative-life": "Representative life"
+          }
+        }
+
+      },
+      "damage-license-list": {
+        "Licensing": "do you have Licensing?",
+        "engineering-license": "do you have Engineering license?",
+        "energy-export-license": "do you have Energy export license?"
+      },
+      "issuance-license-option": {
+        "compensation-license-liable": "Is the compensation license liable?",
+        "licensed-pay-engineering-damage": "Is it licensed to pay engineering damages?",
+        "licensed-pay-energy-damages": "Is it licensed to pay energy damages?"
+      }
+    }
+  },
+  "inbox-message": {
+    "title-page": "inbox message",
+    "title": "title",
+    "id": "id",
+    "date": "date",
+    "detail-message": "detail message",
+    "operation": "operation",
+    "label-filter-input": "type your filter message",
+    "to-date": "from date ",
+    "until-date": "until date",
+    "search": "filter"
+  },
+  "validator": {
+    "is-required": "is required",
+    "is-not-email": "is not email",
+    "more": "most more than",
+    "less": "most less than",
+    "match": "doesn't match"
+  },
+  "button": {
+    "submit": "submit",
+    "addition": "add",
+    "edition": "edit",
+    "info": "info",
+    "delete": "delete"
+  }
+}

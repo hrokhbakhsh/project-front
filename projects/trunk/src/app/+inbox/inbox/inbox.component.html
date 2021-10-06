@@ -1,0 +1,95 @@
+<pmt-card title="{{'inbox-message.title-page' | translate}}">
+
+  <div class="row  mt-5">
+    <div class="col position-relative">
+      <mat-card>
+        <mat-card-content>
+          <div class="row">
+            <div class="col-lg-4 col-md-3 ">
+              <pmt-input [label]="'inbox-message.detail-message' | translate" >
+              </pmt-input>
+            </div>
+            <div class="col-lg-3  col-md-3">
+              <pmt-date [label]="'inbox-message.to-date' | translate" >
+              </pmt-date>
+            </div>
+
+            <div class="col-lg-3  col-md-3">
+              <pmt-date [label]="'inbox-message.until-date' | translate" >
+              </pmt-date>
+            </div>
+
+            <div class="action d-flex align-items-center">
+              <pmt-button type="SEARCH"></pmt-button>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <pmt-expand-card>
+        <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8 demo-table ">
+
+          <ng-container matColumnDef="select">
+            <th mat-header-cell *matHeaderCellDef>
+              <mat-checkbox (change)="$event ? masterToggle() : null"
+                            [checked]="selection.hasValue() && isAllSelected()"
+                            [indeterminate]="selection.hasValue() && !isAllSelected()"
+                            [aria-label]="checkboxLabel()">
+              </mat-checkbox>
+            </th>
+            <td mat-cell *matCellDef="let row">
+              <mat-checkbox class="d-flex align-text-bottom" (click)="$event.stopPropagation()"
+                            (change)="$event ? selection.toggle(row) : null"
+                            [checked]="selection.isSelected(row)"
+                            [aria-label]="checkboxLabel(row)">
+              </mat-checkbox>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header class="text-capitalize"> {{ 'inbox-message.id' | translate}}  </th>
+            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="title">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header class="text-capitalize"> {{'inbox-message.title' | translate}} </th>
+            <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="body">
+            <th mat-header-cell *matHeaderCellDef class="text-capitalize"> {{ 'inbox-message.detail-message' | translate}} </th>
+            <td mat-cell *matCellDef="let element"> {{element.body}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="date">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header class="text-capitalize"> {{ 'inbox-message.date' | translate}} </th>
+            <td mat-cell *matCellDef="let element"> {{element.date | jalali}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="delete">
+            <th mat-header-cell *matHeaderCellDef class="text-capitalize">
+              {{ 'inbox-message.operation' | translate}}
+            </th>
+            <td mat-cell *matCellDef="let row">
+              <button mat-icon-button  class="text-danger">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                       showFirstLastButtons
+                       aria-label="Select page of periodic elements">
+        </mat-paginator>
+      </pmt-expand-card>
+    </div>
+  </div>
+
+</pmt-card>
